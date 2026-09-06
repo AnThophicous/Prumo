@@ -1,0 +1,53 @@
+{
+  "name": "@prumo/install",
+  "version": "1.0.0",
+  "description": "Interactive installer for the Prumo protocol and documented coding-agent integrations.",
+  "keywords": [
+    "installer",
+    "claude-code",
+    "codex-cli",
+    "cursor-cli",
+    "grok-build",
+    "agents-md",
+    "hooks",
+    "tui"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AnThophicous/Prumo.git",
+    "directory": "packages/installer"
+  },
+  "homepage": "https://github.com/AnThophicous/Prumo#readme",
+  "bugs": {
+    "url": "https://github.com/AnThophicous/Prumo/issues"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "bin": {
+    "prumo-install": "./bin/prumo-install.mjs"
+  },
+  "files": [
+    "bin",
+    "src",
+    "hooks",
+    "statusline",
+    "assets",
+    "content",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "dependencies": {
+    "@slate-terminal/react": "2.3.0"
+  },
+  "scripts": {
+    "prepack": "node ../../scripts/package-installer.mjs",
+    "test": "node --test test/detect.test.mjs test/adapters.test.mjs test/fsops.test.mjs test/hook.test.mjs test/statusline.test.mjs test/ui.test.mjs test/index.test.mjs"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
