@@ -27,10 +27,10 @@ npm install
 node packages/installer/bin/prumo-install.mjs
 ```
 
-After `@prumo/install` is published, the equivalent command will be:
+After `@prumocode/install` is published, the equivalent command will be:
 
 ```bash
-npx @prumo/install
+npx @prumocode/install
 ```
 
 The Slate interface detects local agents and starts with the detected targets selected. Arrow keys move, space toggles, a mouse click toggles, enter installs, and `q`, escape, or `Ctrl+C` exits.
