@@ -2,6 +2,19 @@
 
 All notable changes to Prumo are recorded here. The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and versions follow [Semantic Versioning](https://semver.org/). The protocol, the runtime and the installer are versioned separately; the protocol changelog lives in `protocol/migrations/`.
 
+## [2.1.0] — 2026-09-07
+
+Installer 2.1.0 (opencode adapter); runtime, compiler, verifier and protocol
+unchanged at 2.0.0.
+
+### Added
+
+- `opencode` adapter (`packages/installer/src/adapters/opencode.mjs`): installs
+  the Prumo skill to `~/.config/opencode/skills/prumo/` and a `session.created`
+  plugin (`plugins/prumo-session.mjs`) that runs the session-start hook once
+  per session, fail-open. Usage: `prumo install opencode`. The adapter is part
+  of the default target set.
+
 ## [2.0.0] — 2026-09-07
 
 Installer 2.0.0, runtime 2.0.0, compiler 2.0.0, verifier 2.0.0, protocol 2.0.0.

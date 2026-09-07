@@ -1,6 +1,6 @@
 {
   "name": "@prumocode/installer",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Transactional installer, updater and uninstaller for the Prumo protocol across coding agents.",
   "keywords": [
     "installer",

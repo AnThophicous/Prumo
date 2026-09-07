@@ -2,12 +2,12 @@
 
 # Prumo — an operating protocol for coding agents, compiled
 
-Prumo keeps coding agents on a verifiable delivery process across Claude Code, Codex CLI, Cursor, Grok Build and Gemini CLI. One canonical document, [`content/PRUMO.md`](content/PRUMO.md), is compiled into a small always-on kernel, task-triggered chapters, agent bridges and a rule manifest. A policy runtime loads only the chapters a task needs, a transactional installer wires the runtime into each agent, and a verifier proves that what is installed, loaded and claimed is the canonical policy.
+Prumo keeps coding agents on a verifiable delivery process across Claude Code, Codex CLI, Cursor, Grok Build, Gemini CLI and opencode. One canonical document, [`content/PRUMO.md`](content/PRUMO.md), is compiled into a small always-on kernel, task-triggered chapters, agent bridges and a rule manifest. A policy runtime loads only the chapters a task needs, a transactional installer wires the runtime into each agent, and a verifier proves that what is installed, loaded and claimed is the canonical policy.
 
 A plumb line tells a builder whether a wall is straight. Prumo does the same for agent work: the model keeps its speed, while citable `PRU-xx` rules keep the delivery on the line.
 
 <!-- PRUMO:GENERATED:BEGIN -->
-The protocol contains **201 citable rules** (`PRU-01` to `PRU-267`) in 21 sections, compiled into a kernel of about 2184 tokens and 12 chapters. Protocol version `2.0.0`, source `sha256:9b0eec856ee7`. Supported targets: `claude`, `codex`, `cursor`, `grok`, `gemini`.
+The protocol contains **201 citable rules** (`PRU-01` to `PRU-267`) in 21 sections, compiled into a kernel of about 2184 tokens and 12 chapters. Protocol version `2.0.0`, source `sha256:9b0eec856ee7`. Supported targets: `claude`, `codex`, `cursor`, `grok`, `gemini`, `opencode`.
 <!-- PRUMO:GENERATED:END -->
 
 ## How it works
@@ -17,7 +17,7 @@ content/PRUMO.md  ──compiler──►  kernel + chapters + manifest + bridge
                                         │
                                   policy runtime (~/.prumo)
                                         │
-                     Claude · Codex · Cursor · Grok · Gemini
+                      Claude · Codex · Cursor · Grok · Gemini · opencode
                                         │
                               verifier: doctor · status · lint · evals
 ```
@@ -30,6 +30,16 @@ content/PRUMO.md  ──compiler──►  kernel + chapters + manifest + bridge
 ## Install
 
 Requires Node.js 18 or newer and no sibling repositories.
+
+Fastest — no clone needed:
+
+```bash
+npx -y @prumocode/install@latest install --yes   # detected agents
+npx -y @prumocode/install@latest install opencode --yes
+npx -y @prumocode/install@latest install --dry-run  # plan only, nothing written
+```
+
+From source:
 
 ```bash
 git clone https://github.com/AnThophicous/Prumo.git
@@ -72,6 +82,7 @@ Every command accepts `--json`. Exit codes are stable: `0` ok, `1` failed, `2` u
 | Cursor | `sessionStart` in `~/.cursor/hooks.json` | always-on rule `~/.cursor/rules/prumo.mdc` | unchanged |
 | Grok Build | `SessionStart` and `PostCompact` in `~/.grok/hooks/prumo.json` | global rule `~/.grok/rules/prumo.md` | custom command in `[ui.status_line]` |
 | Gemini CLI | `SessionStart` in `~/.gemini/settings.json` | optional managed block in `~/.gemini/GEMINI.md` | none documented |
+| opencode | `session.created` plugin at `~/.config/opencode/plugins/prumo-session.mjs` (session-start hook, once per session, fail-open) | `/prumo` skill in `~/.config/opencode/skills/prumo/` | unchanged |
 
 Config files are edited with format-preserving JSONC and TOML editors: comments, trailing commas, CRLF, BOM and unknown keys survive. A malformed file stops the step and is never replaced.
 

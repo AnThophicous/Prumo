@@ -1323,7 +1323,8 @@
     "codex",
     "cursor",
     "grok",
-    "gemini"
+    "gemini",
+    "opencode"
   ],
   "rules": [
     {

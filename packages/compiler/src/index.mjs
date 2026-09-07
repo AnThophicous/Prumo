@@ -53,7 +53,7 @@ export {
   stripMarkers
 };
 
-export const DEFAULT_TARGETS = ["claude", "codex", "cursor", "grok", "gemini"];
+export const DEFAULT_TARGETS = ["claude", "codex", "cursor", "grok", "gemini", "opencode"];
 
 export function compileProtocol(source, { targets = DEFAULT_TARGETS, registry, migrationsText } = {}) {
   const ast = parseProtocol(source);
