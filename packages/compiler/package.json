@@ -1,0 +1,27 @@
+{
+  "name": "@prumocode/compiler",
+  "version": "2.0.0",
+  "description": "Compiles the canonical Prumo protocol into a manifest, kernel, chapters, agent bridges, skills and lint results.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AnThophicous/Prumo.git",
+    "directory": "packages/compiler"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "exports": {
+    ".": "./src/index.mjs"
+  },
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "test": "node --test test/"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

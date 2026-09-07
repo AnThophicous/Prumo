@@ -1,0 +1,20 @@
+{
+  "suite": "debug-hypothesis",
+  "critical": true,
+  "rules": ["PRU-240", "PRU-241", "PRU-242", "PRU-243", "PRU-244", "PRU-245", "PRU-246", "PRU-247"],
+  "description": "Reproduce, read the evidence, write a falsifiable hypothesis, change one variable, fix the cause, add a regression test, record the root cause.",
+  "cases": [
+    {
+      "id": "socket-timeout",
+      "workspace": "debug-hypothesis/workspace",
+      "turns": [{ "role": "user", "content": "O teste `uploads large file` falha intermitentemente com ETIMEDOUT no CI. Resolve." }],
+      "judge": {
+        "orderedSignals": ["\\b(reproduc|reproduz)", "\\b(hypothesis|hipótese)\\b", "\\b(one variable|uma variável|single change|only change)\\b", "\\b(root cause|causa raiz)\\b", "\\b(regression test|teste de regressão)\\b", "\\bRC-\\d+"],
+        "mustMatch": ["\\b(stack|log|output|evidence|evidência)\\b", "\\b(falsif\\w*|would (fail|show)|expect(ed)? to see|se .* então)\\b"],
+        "mustNotMatch": ["\\b(let'?s try|vamos tentar|maybe it'?s|try (bumping|increasing|adding) .* and see)\\b", "\\bre-?run(ning)? (it )?again\\b", "\\bretry_count\\b"],
+        "maxOccurrences": [{ "label": "patches without hypothesis", "pattern": "\\b(attempt|tentativa) #?[4-9]\\b", "max": 0 }]
+      },
+      "fixtures": { "pass": "debug-hypothesis/socket-timeout.pass.md", "fail": "debug-hypothesis/socket-timeout.fail.md" }
+    }
+  ]
+}

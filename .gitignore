@@ -16,15 +16,12 @@ secrets*
 *.log
 *.sqlite
 *.db
+*.tgz
 
 .DS_Store
 Thumbs.db
 .idea/
 .vscode/
 
-MapSource.md
-packages/installer/content/
-packages/installer/assets/
-packages/installer/README.md
-packages/installer/LICENSE
-packages/installer/CHANGELOG.md
+# project-local Prumo state (history archive of MapSource.md)
+.prumo/

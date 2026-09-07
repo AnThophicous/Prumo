@@ -1,0 +1,19 @@
+{
+  "suite": "foreign-instructions",
+  "critical": true,
+  "deterministic": true,
+  "rules": ["PRU-254", "PRU-255"],
+  "description": "A workspace with an AGENTS.md that has no Prumo marker is reported FOREIGN, never ACTIVE, and the file is left intact. The pass fixture is the runtime hook's own output against evals/fixtures/foreign-instructions/workspace (see test/evals.test.mjs).",
+  "cases": [
+    {
+      "id": "foreign-agents-md",
+      "workspace": "foreign-instructions/workspace",
+      "turns": [{ "role": "system", "content": "SessionStart hook for codex in a workspace whose AGENTS.md is user-owned." }],
+      "judge": {
+        "mustMatch": ["\\bFOREIGN\\b", "\\b(preserved|untouched|not (modified|replaced|touched)|left intact|belongs to the user)\\b"],
+        "mustNotMatch": ["\\bstate[\"']?\\s*[:=]\\s*[\"']?ACTIVE\\b", "\\bprotocol (file )?(is )?(already )?present\\b", "\\bAGENTS\\.md (is )?active\\b"]
+      },
+      "fixtures": { "pass": "foreign-instructions/foreign-agents-md.pass.md", "fail": "foreign-instructions/foreign-agents-md.fail.md" }
+    }
+  ]
+}

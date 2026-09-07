@@ -1,47 +1,79 @@
+import { existsSync } from "node:fs";
 import { join } from "node:path";
-import { readFileSync } from "node:fs";
-import { nodeCommand, readJson, writeJson, writeText } from "../fsops.mjs";
-import { protocolSource } from "../protocol.mjs";
+import { getPath, setPath } from "../config/jsonc.mjs";
+import {
+  addFlatHook,
+  check,
+  deleteStep,
+  fileStep,
+  hookCommand,
+  jsoncStep,
+  removeFlatHook,
+  summarizeState,
+  verifyFlatHook,
+  verifyOwnedFile
+} from "./contract.mjs";
 
-const MARKER = "prumo-hook.mjs";
+const RULE_ARTIFACT = "agents/cursor-rule.mdc";
+
+function paths(home) {
+  const root = join(home, ".cursor");
+  return { root, hooks: join(root, "hooks.json"), rule: join(root, "rules", "prumo.mdc") };
+}
 
 export const cursorAdapter = {
   id: "cursor",
   label: "Cursor (CLI and app)",
   commands: ["cursor-agent", "cursor"],
-  configDirs: home => [join(home, ".cursor")],
-  capabilities: { hooks: true, statusline: false, protocolFile: "AGENTS.md", compaction: "always-on rule" },
-  steps({ home, runtime }) {
-    const hooksPath = join(home, ".cursor", "hooks.json");
-    const rulePath = join(home, ".cursor", "rules", "prumo.mdc");
+  configDirs: home => [paths(home).root],
+  capabilities: {
+    hooks: { sessionStart: true, postCompact: false },
+    persistentRules: "always-on rule",
+    skills: false,
+    customStatusLine: false,
+    projectInstructions: "AGENTS.md",
+    userInstructions: "~/.cursor/rules/prumo.mdc"
+  },
+  planInstall(context) {
+    const target = paths(context.home);
     return [
-      {
+      jsoncStep({
+        id: "cursor.hook",
         title: "Register the sessionStart hook",
-        path: hooksPath,
-        apply() {
-          const config = readJson(hooksPath, { version: 1, hooks: {} });
-          config.version = config.version ?? 1;
-          config.hooks = config.hooks ?? {};
-          registerHook(config.hooks, "sessionStart", nodeCommand(runtime.hookPath, ["--cli=cursor", "--event=session-start"]));
-          writeJson(hooksPath, config);
+        path: target.hooks,
+        adapter: "cursor",
+        mutate(text) {
+          let next = text;
+          if (getPath(next, ["version"]) === undefined) next = setPath(next, ["version"], 1);
+          return addFlatHook(next, ["hooks", "sessionStart"], { type: "command", command: hookCommand(context, "cursor", "session-start"), timeout: 15 });
         }
-      },
-      {
-        title: "Install the always-on Prumo rule",
-        path: rulePath,
-        apply() {
-          const source = protocolSource("cursor", [runtime.contentDir]);
-          const body = source ? readFileSync(source.path, "utf8") : "";
-          writeText(rulePath, `---\ndescription: Prumo operating protocol\nalwaysApply: true\n---\n\n${body}`);
-        }
-      }
+      }),
+      fileStep({ id: "cursor.rule", title: "Install the always-on Prumo rule", path: target.rule, content: context.artifacts.get(RULE_ARTIFACT), adapter: "cursor" })
     ];
+  },
+  planUpdate(context) {
+    return this.planInstall(context);
+  },
+  planUninstall(context, journal) {
+    const target = paths(context.home);
+    const recorded = (journal?.targets?.cursor?.mutations ?? []).find(entry => entry.step === "cursor.rule");
+    return [
+      jsoncStep({ id: "cursor.hook", title: "Remove the sessionStart hook", path: target.hooks, adapter: "cursor", mutate: text => removeFlatHook(text, ["hooks", "sessionStart"]) }),
+      deleteStep({ id: "cursor.rule", title: "Remove the Prumo rule", path: target.rule, adapter: "cursor", guardHash: recorded?.afterHash })
+    ];
+  },
+  verifyInstall(context) {
+    const target = paths(context.home);
+    const checks = [
+      verifyFlatHook(context, { id: "cursor.hook", path: target.hooks, eventPath: ["hooks", "sessionStart"], cli: "cursor" }),
+      verifyOwnedFile("cursor.rule", target.rule, context.artifacts.get(RULE_ARTIFACT))
+    ];
+    return { state: summarizeState(checks, { requiredIds: ["cursor.hook", "cursor.rule"] }), checks };
+  },
+  diagnose(context) {
+    const target = paths(context.home);
+    const { checks } = this.verifyInstall(context);
+    checks.push(check("cursor.config-dir", existsSync(target.root) ? true : "warn", existsSync(target.root) ? target.root : `${target.root} absent (Cursor not initialised)`));
+    return checks;
   }
 };
-
-function registerHook(hooks, event, command) {
-  hooks[event] = Array.isArray(hooks[event]) ? hooks[event] : [];
-  const present = hooks[event].some(entry => typeof entry.command === "string" && entry.command.includes(MARKER));
-  if (present) return;
-  hooks[event].push({ type: "command", command, timeout: 15 });
-}

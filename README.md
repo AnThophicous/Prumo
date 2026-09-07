@@ -1,133 +1,127 @@
 <img src="assets/logo.svg" alt="Prumo" width="72" align="right" />
 
-# Prumo — one operating protocol for coding agents
+# Prumo — an operating protocol for coding agents, compiled
 
-Prumo keeps coding agents on a verifiable delivery process across Claude Code, Codex CLI, Cursor, and Grok Build. One normative source generates the instruction files each tool reads; the installer adds only the lifecycle and status-line integrations each vendor documents.
+Prumo keeps coding agents on a verifiable delivery process across Claude Code, Codex CLI, Cursor, Grok Build and Gemini CLI. One canonical document, [`content/PRUMO.md`](content/PRUMO.md), is compiled into a small always-on kernel, task-triggered chapters, agent bridges and a rule manifest. A policy runtime loads only the chapters a task needs, a transactional installer wires the runtime into each agent, and a verifier proves that what is installed, loaded and claimed is the canonical policy.
 
 A plumb line tells a builder whether a wall is straight. Prumo does the same for agent work: the model keeps its speed, while citable `PRU-xx` rules keep the delivery on the line.
 
-## The problem
+<!-- PRUMO:GENERATED:BEGIN -->
+The protocol contains **201 citable rules** (`PRU-01` to `PRU-267`) in 21 sections, compiled into a kernel of about 2184 tokens and 12 chapters. Protocol version `2.0.0`, source `sha256:9b0eec856ee7`. Supported targets: `claude`, `codex`, `cursor`, `grok`, `gemini`.
+<!-- PRUMO:GENERATED:END -->
 
-Agent instruction filenames and lifecycle contracts differ by vendor. Copying the same rules by hand creates drift, while context compaction can drop the compact reminders that keep a long session disciplined.
+## How it works
 
-Prumo maintains one source, renders the required filenames, installs persistent rules where the CLI supports them, and uses lifecycle hooks to seed missing project instructions without overwriting files already there.
+```text
+content/PRUMO.md  ──compiler──►  kernel + chapters + manifest + bridges + skill
+                                        │
+                                  policy runtime (~/.prumo)
+                                        │
+                     Claude · Codex · Cursor · Grok · Gemini
+                                        │
+                              verifier: doctor · status · lint · evals
+```
+
+- **Kernel** (under 2,500 tokens): identity, bootstrap, specification minimum, read-before-edit, batching, three-run breaker, honest verdict, verification honesty, MapSource minimum, delivery gate and the chapter router. Always injected.
+- **Chapters**: `coding`, `specification`, `communication`, `judgment`, `debugging`, `security`, `git`, `architecture`, `mapsource`, `public-writing`, `subagents`, `protocol`. Loaded by observable triggers (task keywords, touched paths, signals). `security` cannot be suppressed once triggered.
+- **Bridges**: `CLAUDE.md`, `AGENTS.md`, `GEMINI.md`, a Cursor rule and a Grok rule, each carrying a `<!-- PRUMO:BEGIN protocol=… hash=… -->` managed block. Only the block belongs to Prumo; foreign files are never replaced.
+- **Manifest**: every rule with its section, chapter, tier, triggers, references, enforcement class and source line. Generated, never edited.
 
 ## Install
 
-Requires Node.js 18 or newer. The npm package has not had its first public release yet. Until Slate and Prumo are on npm, clone both repositories as siblings:
+Requires Node.js 18 or newer and no sibling repositories.
 
 ```bash
-git clone https://github.com/AnThophicous/Slate.git
 git clone https://github.com/AnThophicous/Prumo.git
-cd Slate
-npm install
-npm run build --workspaces --if-present
-cd ../Prumo
-npm install
-node packages/installer/bin/prumo-install.mjs
+cd Prumo
+npm ci
+npm run build
+node bin/prumo.mjs install            # detected agents, interactive confirmation
+node bin/prumo.mjs install claude codex --yes
+node bin/prumo.mjs install --dry-run  # plan only, nothing written
 ```
 
-After `@prumocode/install` is published, the equivalent command will be:
+Installation is a transaction: `plan → snapshot → stage → validate → apply → verify → commit`. Any failure before commit rolls every file back. Snapshots live under `~/.prumo/backups/<timestamp>/` and the journal under `~/.prumo/state/install.json`.
 
-```bash
-npx @prumocode/install
-```
+## CLI
 
-The Slate interface detects local agents and starts with the detected targets selected. Arrow keys move, space toggles, a mouse click toggles, enter installs, and `q`, escape, or `Ctrl+C` exits.
+| Command | Purpose |
+| --- | --- |
+| `prumo install [targets]` | Install runtime, protocol and integrations. `--yes`, `--dry-run`, `--no-statusline`, `--user-protocol`. |
+| `prumo update [targets]` | Recompile the protocol and migrate installed targets. |
+| `prumo uninstall <t> \| --all` | Remove Prumo hooks, skills and managed blocks. Foreign configuration stays byte-for-byte. |
+| `prumo rollback [id] [--list]` | Restore a snapshot. |
+| `prumo diff` | What install or update would change, secrets redacted. |
+| `prumo status [--task "…"] [--file p]` | Versions, target states, loaded chapters with reasons, token budget. |
+| `prumo doctor` | Health check. Exit 3 protocol integrity, 4 drift, 6 partial, 1 broken. |
+| `prumo lint` | Canonical protocol, generated artifacts and README integrity. |
+| `prumo explain PRU-158` | Rule text, section, chapter, source line, related rules. |
+| `prumo chapter debugging` | Print a compiled chapter. |
+| `prumo coverage` | Enforcement class per rule: `ENFORCED`, `DETERMINISTICALLY_TESTED`, `BEHAVIOR_EVAL`, `MANUAL`. |
+| `prumo state [lint\|search q\|compact]` | MapSource v2 operations in the current workspace. |
+| `prumo eval [--suite s]` | Behavioral evals against fixtures, recorded responses (`--responses dir`) or a live agent (`--command`). |
 
-For scripts and CI:
-
-```bash
-node packages/installer/bin/prumo-install.mjs --all
-node packages/installer/bin/prumo-install.mjs --only claude
-node packages/installer/bin/prumo-install.mjs --dry-run --all
-node packages/installer/bin/prumo-install.mjs --list
-```
+Every command accepts `--json`. Exit codes are stable: `0` ok, `1` failed, `2` usage, `3` protocol integrity, `4` drift, `5` unsupported target, `6` partial state needing manual action.
 
 ## What it installs
 
-| CLI | Protocol persistence | Project file | Status line |
+| Agent | Hook | Persistent policy | Status line |
 | --- | --- | --- | --- |
-| Claude Code | `SessionStart` hook, including the `compact` source | `CLAUDE.md` | custom `Workstate: [Prumo] \| model \| project` |
-| Codex CLI | `SessionStart` hook with `features.hooks = true`; it runs again after compaction | `AGENTS.md` | documented native items in `tui.status_line` |
-| Cursor CLI and app | `sessionStart` hook plus an always-on user rule | `AGENTS.md` | unchanged; no documented custom command |
-| Grok Build | global rule plus `SessionStart` and `PostCompact` seeding hooks | `AGENTS.md` | custom command in `[ui.status_line]` |
+| Claude Code | `SessionStart` (refires on compact) in `~/.claude/settings.json` | `/prumo` skill with kernel, dispatch table and chapter references; optional managed block in `~/.claude/CLAUDE.md` | custom command |
+| Codex CLI | `SessionStart` in `~/.codex/hooks.json`, `features.hooks = true` | optional managed block in `~/.codex/AGENTS.md` | native items in `tui.status_line` |
+| Cursor | `sessionStart` in `~/.cursor/hooks.json` | always-on rule `~/.cursor/rules/prumo.mdc` | unchanged |
+| Grok Build | `SessionStart` and `PostCompact` in `~/.grok/hooks/prumo.json` | global rule `~/.grok/rules/prumo.md` | custom command in `[ui.status_line]` |
+| Gemini CLI | `SessionStart` in `~/.gemini/settings.json` | optional managed block in `~/.gemini/GEMINI.md` | none documented |
 
-The integrations follow the current vendor contracts: [Claude Code hooks](https://code.claude.com/docs/en/hooks) and [status line](https://code.claude.com/docs/en/statusline), [Codex hooks](https://learn.chatgpt.com/docs/hooks) and [configuration](https://learn.chatgpt.com/docs/config-file/config-reference), [Cursor hooks](https://cursor.com/docs/hooks), and Grok Build [rules](https://docs.x.ai/build/features/project-rules), [hooks](https://docs.x.ai/build/features/hooks), and [status line](https://docs.x.ai/build/features/status-line).
+Config files are edited with format-preserving JSONC and TOML editors: comments, trailing commas, CRLF, BOM and unknown keys survive. A malformed file stops the step and is never replaced.
 
-Before changing an existing configuration file, Prumo writes one `<file>.prumo-backup` beside it. Reinstalling does not duplicate Claude, Codex, or Cursor hooks. Invalid existing JSON stops that step and leaves the original untouched.
+## Target states
 
-## What the protocol says
+`ABSENT`, `ACTIVE`, `PARTIAL`, `FOREIGN`, `DRIFTED`, `BROKEN`, `DISABLED`. A file with the right name is never reported active: activation requires the managed marker, the protocol version and a valid content hash. An `AGENTS.md` without Prumo ownership is `FOREIGN`; the runtime still injects the kernel by hook and leaves the file alone.
 
-The protocol contains 166 citable rules. Its load-bearing sections are:
+## Runtime guarantees
 
-- **Density per round** (`PRU-10` to `PRU-17`): write code, tests, and diagnostic output together; after three non-converging runs, rebuild the hypothesis.
-- **Specification before code** (`PRU-50` to `PRU-54`): state the goal, scope, exclusions, assumptions, and executable acceptance criteria.
-- **Readable code** (`PRU-20` to `PRU-28`, `PRU-160` to `PRU-182`): no dead code or hidden placeholders; names carry the explanation.
-- **Git discipline** (`PRU-90` to `PRU-99`): inspect the staged diff, sweep for secrets, keep commits atomic, and never push without an explicit request.
-- **Self-audit and security** (`PRU-110` to `PRU-115`, `PRU-210` to `PRU-239`): record concrete suspicions and close high-severity findings before delivery.
+- The hook validates the payload schema and size, resolves the workspace with `realpath`, requires an existing directory and never creates one.
+- External values (paths, branch names, payload fields) enter the context as delimited data, never as instructions.
+- The hook fails open for the agent but never silently: every failure writes a structured receipt to `~/.prumo/logs/runtime.ndjson` (timestamp, event, adapter, error code, redacted path). No prompts, file contents or secrets are logged. `PRUMO_DEBUG=1` adds local detail. No telemetry.
+- `PRUMO_SEED=0` disables bridge seeding and is reported as `DISABLED`, not as "already present".
 
-Read the normative text in [`content/PRUMO.md`](content/PRUMO.md).
+## Protocol integrity
+
+The build fails on a duplicate id, a removed id without a migration entry, an unresolved `PRU-*` or section reference, an index mismatch, a stale generated file, a wrong rule range or a manual count in the README. Known contradictions (comments in PRU-20/150 versus PRU-177/182) are encoded in the linter. Changes to stable rules are recorded in [`protocol/migrations/`](protocol/migrations/) and ids are never recycled.
+
+Rule precedence when two rules collide: security and privacy, data integrity, explicit user decision, existing public contract, active specification, repository convention, Prumo preference.
+
+## Behavioral evals
+
+`evals/behavior/` holds the suites `sycophancy`, `pressure-resistance`, `gold-plating`, `false-verification`, `debug-hypothesis`, `three-run-breaker`, `security-trigger`, `foreign-instructions`, `scope-discipline` and `user-correction`. Each case has a deterministic judge and a pass and a fail fixture; the test suite proves the judges discriminate. Release gates: core pass rate at least 95 percent, critical-rule pass rate 100 percent. A rule is called `ENFORCED` only when a mechanism prevents the violation; prompted rules are `BEHAVIOR_EVAL` or `MANUAL`.
 
 ## Configuration
 
 | Option or variable | Default | Effect |
 | --- | --- | --- |
-| `--all` | off | Select every detected agent in headless mode |
-| `--only <id>` | none | Install one of `claude`, `codex`, `cursor`, or `grok` |
-| `--dry-run` | off | Print every target path without writing |
-| `--no-statusline` | status lines enabled | Skip every supported status-line change |
-| `--user-protocol` | off | Also copy the conventional protocol file into the agent home |
-| `--list` | off | Print detection evidence and exit |
-| `PRUMO_HOME` | `~/.prumo` | Set the shared runtime directory |
-| `PRUMO_SEED=0` | seeding enabled | Stop hooks from creating project instruction files |
-| `NO_COLOR` | unset | Render custom status lines without ANSI color |
-
-Unknown options, unknown agent ids, and conflicting `--all`/`--only` selections fail before any file is touched.
-
-## Architecture
-
-```mermaid
-graph TD
-    A[content/PRUMO.md] --> B[scripts/build-content.mjs]
-    B --> C[CLAUDE.md]
-    B --> D[AGENTS.md]
-    B --> E[GEMINI.md]
-    F[prumo-install] --> G[CLI detection]
-    G --> H[Claude adapter]
-    G --> I[Codex adapter]
-    G --> J[Cursor adapter]
-    G --> K[Grok adapter]
-    H --> L[shared runtime under PRUMO_HOME]
-    I --> L
-    J --> L
-    K --> L
-    L --> M[project rule seeding]
-    L --> N[agent-specific context output]
-    L --> O[custom status renderer]
-```
-
-The shared hook reads bounded JSON from standard input, resolves the workspace fields used by each CLI, and creates an instruction file only when none exists. Claude receives `hookSpecificOutput.additionalContext`, Cursor receives `additional_context`, Codex receives plain text, and Grok's passive hook stays silent because Grok ignores stdout for passive events.
-
-## Known limitations
-
-- Slate 2.3.0 is not published to npm yet. The Prumo tarball declares portable version dependencies, but public installation must wait for the two Slate packages to be released.
-- Codex accepts named native footer items, not a custom command, so its status line cannot display the Prumo badge.
-- Cursor documents no custom status-line command. Prumo leaves its footer unchanged.
-- Grok documents command status lines on macOS and Linux; its documentation marks Windows support as untested. Prumo emits a Windows-safe Node command, but the CLI remains the compatibility boundary.
-- A seed never overwrites an existing `CLAUDE.md` or `AGENTS.md`. Merge the protocol manually when a project already owns that file.
+| `PRUMO_HOME` | `~/.prumo` | Runtime, protocol, state, backups and logs directory |
+| `PRUMO_SEED=0` | seeding on | Hooks never create project instruction files |
+| `PRUMO_DEBUG=1` | off | Detailed local diagnostics in the runtime log |
+| `--no-statusline` | status lines on | Skip status-line changes |
+| `--user-protocol` | off | Attach the managed block to the agent's user-level instruction file |
+| `NO_COLOR` | unset | Status line without ANSI color |
 
 ## Development
 
 ```bash
-npm install
-npm run content:build
-npm test
-npm run install:dry
-npm pack --dry-run --workspace @prumo/install
+npm ci
+npm run build      # compile content/PRUMO.md into generated/, AGENTS.md and the README block
+npm run lint       # protocol, generated artifacts, README
+npm test           # integrity, mutation, config editors, adapters, transaction, runtime, evals
+npm pack --dry-run
 ```
 
-The installer uses [Slate](https://github.com/AnThophicous/Slate) for flex layout, reactive state, hit-tested mouse input, and ANSI rendering. The test suite covers generated content, detection, configuration preservation, all four adapters, hook payloads, status-line output, keyboard input, mouse input, and argument validation.
+Layout: `packages/compiler` (parser, lint, renderers), `packages/runtime` (self-contained hook, router, state machine, MapSource v2, status line; copied into `~/.prumo/runtime`), `packages/installer` (adapters, JSONC/TOML editors, transaction, journal, CLI), `packages/verifier` (doctor, status, lint, eval harness), `evals/`, `schemas/`, `protocol/` (registry and migrations).
+
+## Non-goals
+
+Prumo is not an IDE, a SaaS, a telemetry system, a CI platform, a secrets manager, a Git or issue-tracker replacement, an agent framework or a mandatory subagent orchestrator. It is protocol, runtime, installation and verification.
 
 ## License
 

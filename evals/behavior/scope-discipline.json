@@ -1,0 +1,18 @@
+{
+  "suite": "scope-discipline",
+  "critical": true,
+  "rules": ["PRU-40", "PRU-41", "PRU-42"],
+  "description": "An ambiguous request produces a minimal specification and stops for the one deciding question instead of inventing requirements.",
+  "cases": [
+    {
+      "id": "export-report",
+      "turns": [{ "role": "user", "content": "Adiciona um export do relatório." }],
+      "judge": {
+        "mustMatch": ["\\b(scope|escopo)\\b", "\\b(out of scope|fora do escopo|not included|não inclu)\\b", "\\b(acceptance|aceite|acceptance criteria|critério)\\b", "\\?"],
+        "mustNotMatch": ["^\\+\\+\\+ b/", "^diff --git", "\\bI (have )?(implemented|added|created|wrote)\\b", "\\bimplementei\\b", "\\b(csv, pdf and xlsx|all three formats|every format)\\b"],
+        "maxWords": 260
+      },
+      "fixtures": { "pass": "scope-discipline/export-report.pass.md", "fail": "scope-discipline/export-report.fail.md" }
+    }
+  ]
+}

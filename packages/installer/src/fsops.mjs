@@ -1,114 +1,34 @@
-import { copyFileSync, existsSync, mkdirSync, readFileSync, readdirSync, statSync, writeFileSync } from "node:fs";
+import { createHash } from "node:crypto";
+import { copyFileSync, existsSync, mkdirSync, readFileSync, readdirSync, renameSync, rmSync, statSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 
-export function stripJsonComments(source) {
-  let output = "";
-  let index = 0;
-  let inString = false;
-  let inLine = false;
-  let inBlock = false;
-  while (index < source.length) {
-    const character = source[index];
-    const next = source[index + 1] ?? "";
-    if (inLine) {
-      if (character === "\n") {
-        inLine = false;
-        output += character;
-      }
-      index += 1;
-      continue;
-    }
-    if (inBlock) {
-      if (character === "*" && next === "/") {
-        inBlock = false;
-        index += 2;
-        continue;
-      }
-      index += 1;
-      continue;
-    }
-    if (inString) {
-      output += character;
-      if (character === "\\" && index + 1 < source.length) {
-        output += source[index + 1];
-        index += 2;
-        continue;
-      }
-      if (character === '"') inString = false;
-      index += 1;
-      continue;
-    }
-    if (character === '"') {
-      inString = true;
-      output += character;
-      index += 1;
-      continue;
-    }
-    if (character === "/" && next === "/") {
-      inLine = true;
-      index += 2;
-      continue;
-    }
-    if (character === "/" && next === "*") {
-      inBlock = true;
-      index += 2;
-      continue;
-    }
-    output += character;
-    index += 1;
-  }
-  return removeTrailingCommas(output);
+export function hashText(text) {
+  return createHash("sha256").update(String(text).replace(/\r\n?/g, "\n"), "utf8").digest("hex");
 }
 
-function removeTrailingCommas(source) {
-  let output = "";
-  let inString = false;
-  for (let index = 0; index < source.length; index += 1) {
-    const character = source[index];
-    if (character === "\\" && inString && index + 1 < source.length) {
-      output += character + source[index + 1];
-      index += 1;
-      continue;
-    }
-    if (character === '"') inString = !inString;
-    if (character === "," && !inString) {
-      let lookahead = index + 1;
-      while (/\s/.test(source[lookahead] ?? "")) lookahead += 1;
-      if (source[lookahead] === "}" || source[lookahead] === "]") continue;
-    }
-    output += character;
-  }
-  return output;
+export function hashFile(path) {
+  if (!existsSync(path)) return undefined;
+  return createHash("sha256").update(readFileSync(path)).digest("hex");
 }
 
-export function readJson(path, fallback = {}) {
-  if (!existsSync(path)) return structuredClone(fallback);
-  try {
-    const parsed = JSON.parse(stripJsonComments(readFileSync(path, "utf8")));
-    if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) throw new Error("expected a JSON object");
-    return parsed;
-  } catch (error) {
-    const detail = error instanceof Error ? error.message : String(error);
-    throw new Error(`Cannot parse ${path}: ${detail}`);
-  }
+export function readText(path, fallback = "") {
+  if (!existsSync(path)) return fallback;
+  return readFileSync(path, "utf8");
 }
 
-export function writeJson(path, value) {
+export function ensureDirectory(path) {
+  mkdirSync(path, { recursive: true });
+}
+
+export function writeTextAtomic(path, content) {
   ensureDirectory(dirname(path));
-  backup(path);
-  writeFileSync(path, `${JSON.stringify(value, null, 2)}\n`);
+  const temporary = `${path}.prumo-tmp-${process.pid}`;
+  writeFileSync(temporary, content);
+  renameSync(temporary, path);
 }
 
-export function writeText(path, content) {
-  ensureDirectory(dirname(path));
-  backup(path);
-  writeFileSync(path, content);
-}
-
-export function copyInto(source, target) {
-  ensureDirectory(dirname(target));
-  backup(target);
-  copyFileSync(source, target);
+export function removeFile(path) {
+  rmSync(path, { force: true });
 }
 
 export function copyDirectory(source, target, filter = () => true) {
@@ -120,65 +40,77 @@ export function copyDirectory(source, target, filter = () => true) {
       copyDirectory(from, to, filter);
       continue;
     }
-    if (!filter(entry)) continue;
+    if (!filter(entry, from)) continue;
     copyFileSync(from, to);
   }
 }
 
-export function ensureDirectory(path) {
-  mkdirSync(path, { recursive: true });
-}
-
-export function backup(path) {
-  if (!existsSync(path)) return undefined;
-  const target = `${path}.prumo-backup`;
-  if (existsSync(target)) return target;
-  copyFileSync(path, target);
-  return target;
-}
-
-export function upsertTomlValue(source, section, key, literal) {
-  const lines = source.split(/\r?\n/);
-  const header = `[${section}]`;
-  const assignment = `${key} = ${literal}`;
-  const sectionIndex = lines.findIndex(line => line.trim() === header);
-  if (sectionIndex === -1) {
-    const prefix = source.trim().length === 0 ? "" : `${source.replace(/\s*$/, "")}\n\n`;
-    return `${prefix}${header}\n${assignment}\n`;
+export function listFiles(directory, prefix = "") {
+  if (!existsSync(directory)) return [];
+  const files = [];
+  for (const entry of readdirSync(directory)) {
+    const path = join(directory, entry);
+    const relative = prefix ? `${prefix}/${entry}` : entry;
+    if (statSync(path).isDirectory()) files.push(...listFiles(path, relative));
+    else files.push(relative);
   }
-  let end = lines.length;
-  for (let index = sectionIndex + 1; index < lines.length; index += 1) {
-    if (/^\s*\[/.test(lines[index])) {
-      end = index;
-      break;
+  return files.sort();
+}
+
+export function nodeCommand(scriptPath, argumentsList = [], platform = process.platform) {
+  const parts = ["node", scriptPath, ...argumentsList].map(part => quoteArgument(String(part), platform));
+  return parts.join(" ");
+}
+
+export function quoteArgument(value, platform = process.platform) {
+  if (platform === "win32") {
+    const text = value.replaceAll("\\", "/");
+    return /[\s"'`$&|<>^]/.test(text) || text.length === 0 ? `"${text.replaceAll('"', '\\"')}"` : text;
+  }
+  if (/^[A-Za-z0-9_\-=./:+@,]+$/.test(value)) return value;
+  return `'${value.replaceAll("'", `'\\''`)}'`;
+}
+
+export function splitCommand(command) {
+  const words = [];
+  let current = "";
+  let quote;
+  let hasWord = false;
+  for (let index = 0; index < command.length; index += 1) {
+    const character = command[index];
+    if (quote) {
+      if (character === quote) {
+        quote = undefined;
+        continue;
+      }
+      if (quote === '"' && character === "\\" && command[index + 1] === '"') {
+        current += '"';
+        index += 1;
+        continue;
+      }
+      current += character;
+      continue;
     }
+    if (character === "\\" && index + 1 < command.length) {
+      current += command[index + 1];
+      index += 1;
+      hasWord = true;
+      continue;
+    }
+    if (character === '"' || character === "'") {
+      quote = character;
+      hasWord = true;
+      continue;
+    }
+    if (/\s/.test(character)) {
+      if (hasWord || current.length > 0) words.push(current);
+      current = "";
+      hasWord = false;
+      continue;
+    }
+    current += character;
+    hasWord = true;
   }
-  const keyIndex = lines.slice(sectionIndex + 1, end).findIndex(line => new RegExp(`^\\s*${key}\\s*=`).test(line));
-  if (keyIndex === -1) {
-    lines.splice(end, 0, assignment);
-  } else {
-    lines[sectionIndex + 1 + keyIndex] = assignment;
-  }
-  return lines.join("\n");
-}
-
-export function readText(path, fallback = "") {
-  if (!existsSync(path)) return fallback;
-  try {
-    return readFileSync(path, "utf8");
-  } catch {
-    return fallback;
-  }
-}
-
-export function nodeCommand(scriptPath, argumentsList = []) {
-  const commandPath = commandArgument(scriptPath);
-  const argumentsText = argumentsList.map(commandArgument).join(" ");
-  return argumentsText.length > 0 ? `node ${commandPath} ${argumentsText}` : `node ${commandPath}`;
-}
-
-function commandArgument(value) {
-  const text = String(value);
-  if (process.platform === "win32") return `"${text.replaceAll("\\", "/").replaceAll('"', '\\"')}"`;
-  return `'${text.replaceAll("'", `'"'"'`)}'`;
+  if (hasWord || current.length > 0) words.push(current);
+  return words;
 }

@@ -1,22 +1,22 @@
 {
   "name": "prumo",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
-  "description": "One operating protocol with persistent rules and lifecycle hooks for coding agents.",
-  "keywords": ["ai-agent", "claude-code", "codex-cli", "cursor-cli", "grok", "agents-md", "coding-agent", "developer-protocol"],
+  "description": "Protocol compiler, policy runtime, transactional installer and verifier for the Prumo operating protocol for coding agents.",
+  "keywords": ["ai-agent", "claude-code", "codex-cli", "cursor", "grok", "gemini-cli", "agents-md", "coding-agent", "developer-protocol"],
   "license": "MIT",
   "repository": { "type": "git", "url": "https://github.com/AnThophicous/Prumo.git" },
   "homepage": "https://github.com/AnThophicous/Prumo#readme",
   "bugs": { "url": "https://github.com/AnThophicous/Prumo/issues" },
   "workspaces": ["packages/*"],
   "engines": { "node": ">=18" },
+  "bin": { "prumo": "./bin/prumo.mjs" },
+  "files": ["bin", "content", "generated", "packages", "protocol", "schemas", "scripts", "evals", "README.md", "CHANGELOG.md", "LICENSE"],
   "scripts": {
-    "content:build": "node scripts/build-content.mjs",
-    "test": "node --test test/content.test.mjs && npm run test --workspaces --if-present",
-    "install:dry": "node packages/installer/bin/prumo-install.mjs --dry-run --all"
-  },
-  "devDependencies": {
-    "@slate-terminal/core": "file:../Slate/packages/slate",
-    "@slate-terminal/react": "file:../Slate/packages/slate-react"
+    "build": "node scripts/build-content.mjs",
+    "lint": "node scripts/lint-protocol.mjs",
+    "test": "node --test",
+    "prumo": "node bin/prumo.mjs",
+    "install:dry": "node bin/prumo.mjs install --dry-run"
   }
 }

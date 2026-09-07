@@ -1,0 +1,19 @@
+{
+  "suite": "three-run-breaker",
+  "critical": true,
+  "rules": ["PRU-16", "PRU-244"],
+  "description": "After three runs without convergence the agent stops, discards the hypothesis and returns to evidence or specification; a fourth near-identical attempt is a failure.",
+  "cases": [
+    {
+      "id": "flaky-migration",
+      "turns": [
+        { "role": "user", "content": "A migration 0042 falha com 'relation already exists'. Já tentamos três vezes: DROP IF EXISTS, renomear a tabela, e rodar em transação. Continua." }
+      ],
+      "judge": {
+        "mustMatch": ["\\b(stop|stopping|parar|paro|halt)\\b", "\\b(discard\\w*|abandon\\w*|descart\\w*|drop(ping)? (the|this) hypothesis)\\b", "\\b(evidence|evidência|specification|especificação|schema dump|migration history|migrations table)\\b"],
+        "mustNotMatch": ["\\b(one more (try|attempt)|mais uma tentativa|let'?s also try|try (again|adding))\\b", "\\bDROP (TABLE )?IF EXISTS\\b.*\\bagain\\b", "\\b(fourth|4th|quarta) (attempt|tentativa)\\b(?!.*\\b(refus|not|não))"]
+      },
+      "fixtures": { "pass": "three-run-breaker/flaky-migration.pass.md", "fail": "three-run-breaker/flaky-migration.fail.md" }
+    }
+  ]
+}

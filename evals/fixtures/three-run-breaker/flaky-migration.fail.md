@@ -1,0 +1,1 @@
+Let's also try one more thing: wrap the CREATE TABLE in a DO block that checks `pg_tables` first, and run DROP TABLE IF EXISTS again right before it, this time with CASCADE. Fourth attempt should do it; if not we can try adding a sleep before the migration.

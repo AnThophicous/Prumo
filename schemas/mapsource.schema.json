@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://prumo.dev/schemas/mapsource.schema.json",
+  "title": "MapSource v2 (structured view)",
+  "description": "MapSource.md is Markdown. This schema describes the structure the runtime parses out of it (front matter, mandatory headings, suspicion items, root cause records) and the limits it enforces. The Markdown template is generated/templates/MapSource.md.",
+  "type": "object",
+  "required": ["frontMatter", "sections", "suspicion", "rootCauses"],
+  "properties": {
+    "frontMatter": {
+      "type": "object",
+      "required": ["prumo_protocol", "schema", "updated_at"],
+      "properties": {
+        "prumo_protocol": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+        "schema": { "const": 2 },
+        "updated_at": { "type": "string", "format": "date-time" }
+      }
+    },
+    "sections": {
+      "type": "object",
+      "description": "Level-1 headings in this order; Active specification carries the level-2 subheadings Scope, Out of scope, Acceptance criteria, Assumptions.",
+      "required": ["Goal", "Active specification", "Architecture map", "Decisions", "Work fronts", "Suspicion zone", "Root causes", "Project commands", "Glossary"],
+      "additionalProperties": { "type": "string" }
+    },
+    "suspicion": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "severity", "status", "file"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^SZ-\\d{4}$" },
+          "severity": { "enum": ["critical", "high", "medium", "low"] },
+          "status": { "enum": ["open", "mitigated", "resolved", "wontfix"] },
+          "file": { "type": "string", "description": "path:line" },
+          "condition": { "type": "string" },
+          "impact": { "type": "string" },
+          "evidence": { "type": "string" },
+          "proposed fix": { "type": "string" },
+          "introduced_at": { "type": "string" },
+          "resolved_at": { "type": "string" }
+        }
+      }
+    },
+    "rootCauses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "symptom", "cause", "fix"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^RC-\\d{4}$" },
+          "symptom": { "type": "string" },
+          "cause": { "type": "string" },
+          "fix": { "type": "string" },
+          "regression-test": { "type": "string" },
+          "files": { "type": "string" },
+          "commit": { "type": "string" }
+        }
+      }
+    },
+    "limits": {
+      "type": "object",
+      "description": "Byte budgets for the hot file. Closed items move to .prumo/history/ on compaction; nothing is deleted.",
+      "properties": {
+        "target": { "const": 24576 },
+        "warning": { "const": 32768 },
+        "compaction": { "const": 49152 }
+      }
+    }
+  }
+}

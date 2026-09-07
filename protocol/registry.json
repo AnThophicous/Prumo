@@ -1,0 +1,622 @@
+{
+  "protocolVersion": "2.0.0",
+  "note": "Ledger of every rule id ever released. Ids are never recycled. A removal sets removed=<version> and needs protocol/migrations/<version>.md.",
+  "rules": {
+    "PRU-01": {
+      "introduced": "1.0.0",
+      "changed": "2.0.0"
+    },
+    "PRU-02": {
+      "introduced": "1.0.0"
+    },
+    "PRU-03": {
+      "introduced": "1.0.0"
+    },
+    "PRU-04": {
+      "introduced": "1.0.0"
+    },
+    "PRU-05": {
+      "introduced": "1.0.0"
+    },
+    "PRU-10": {
+      "introduced": "1.0.0"
+    },
+    "PRU-11": {
+      "introduced": "1.0.0"
+    },
+    "PRU-12": {
+      "introduced": "1.0.0"
+    },
+    "PRU-13": {
+      "introduced": "1.0.0"
+    },
+    "PRU-14": {
+      "introduced": "1.0.0"
+    },
+    "PRU-15": {
+      "introduced": "1.0.0"
+    },
+    "PRU-16": {
+      "introduced": "1.0.0",
+      "changed": "2.0.0"
+    },
+    "PRU-17": {
+      "introduced": "1.0.0"
+    },
+    "PRU-20": {
+      "introduced": "1.0.0",
+      "changed": "2.0.0"
+    },
+    "PRU-21": {
+      "introduced": "1.0.0"
+    },
+    "PRU-22": {
+      "introduced": "1.0.0"
+    },
+    "PRU-23": {
+      "introduced": "1.0.0"
+    },
+    "PRU-24": {
+      "introduced": "1.0.0"
+    },
+    "PRU-25": {
+      "introduced": "1.0.0"
+    },
+    "PRU-26": {
+      "introduced": "1.0.0"
+    },
+    "PRU-27": {
+      "introduced": "1.0.0"
+    },
+    "PRU-28": {
+      "introduced": "1.0.0"
+    },
+    "PRU-29": {
+      "introduced": "2.0.0"
+    },
+    "PRU-30": {
+      "introduced": "1.0.0"
+    },
+    "PRU-31": {
+      "introduced": "1.0.0",
+      "changed": "2.0.0"
+    },
+    "PRU-32": {
+      "introduced": "1.0.0"
+    },
+    "PRU-33": {
+      "introduced": "1.0.0",
+      "changed": "2.0.0"
+    },
+    "PRU-34": {
+      "introduced": "1.0.0",
+      "changed": "2.0.0"
+    },
+    "PRU-35": {
+      "introduced": "1.0.0",
+      "changed": "2.0.0"
+    },
+    "PRU-36": {
+      "introduced": "1.0.0"
+    },
+    "PRU-37": {
+      "introduced": "1.0.0"
+    },
+    "PRU-40": {
+      "introduced": "1.0.0"
+    },
+    "PRU-41": {
+      "introduced": "1.0.0",
+      "changed": "2.0.0"
+    },
+    "PRU-42": {
+      "introduced": "1.0.0"
+    },
+    "PRU-43": {
+      "introduced": "1.0.0"
+    },
+    "PRU-44": {
+      "introduced": "1.0.0"
+    },
+    "PRU-45": {
+      "introduced": "1.0.0"
+    },
+    "PRU-46": {
+      "introduced": "1.0.0"
+    },
+    "PRU-50": {
+      "introduced": "1.0.0"
+    },
+    "PRU-51": {
+      "introduced": "1.0.0"
+    },
+    "PRU-52": {
+      "introduced": "1.0.0"
+    },
+    "PRU-53": {
+      "introduced": "1.0.0"
+    },
+    "PRU-54": {
+      "introduced": "1.0.0"
+    },
+    "PRU-60": {
+      "introduced": "1.0.0"
+    },
+    "PRU-61": {
+      "introduced": "1.0.0"
+    },
+    "PRU-62": {
+      "introduced": "1.0.0"
+    },
+    "PRU-63": {
+      "introduced": "1.0.0"
+    },
+    "PRU-64": {
+      "introduced": "1.0.0"
+    },
+    "PRU-65": {
+      "introduced": "1.0.0"
+    },
+    "PRU-66": {
+      "introduced": "1.0.0"
+    },
+    "PRU-67": {
+      "introduced": "1.0.0"
+    },
+    "PRU-68": {
+      "introduced": "1.0.0"
+    },
+    "PRU-70": {
+      "introduced": "1.0.0"
+    },
+    "PRU-71": {
+      "introduced": "1.0.0"
+    },
+    "PRU-72": {
+      "introduced": "1.0.0"
+    },
+    "PRU-73": {
+      "introduced": "1.0.0"
+    },
+    "PRU-74": {
+      "introduced": "1.0.0"
+    },
+    "PRU-75": {
+      "introduced": "1.0.0"
+    },
+    "PRU-76": {
+      "introduced": "1.0.0"
+    },
+    "PRU-77": {
+      "introduced": "1.0.0"
+    },
+    "PRU-80": {
+      "introduced": "1.0.0"
+    },
+    "PRU-81": {
+      "introduced": "1.0.0"
+    },
+    "PRU-82": {
+      "introduced": "1.0.0"
+    },
+    "PRU-83": {
+      "introduced": "1.0.0"
+    },
+    "PRU-84": {
+      "introduced": "1.0.0"
+    },
+    "PRU-85": {
+      "introduced": "1.0.0"
+    },
+    "PRU-90": {
+      "introduced": "1.0.0"
+    },
+    "PRU-91": {
+      "introduced": "1.0.0",
+      "changed": "2.0.0"
+    },
+    "PRU-92": {
+      "introduced": "1.0.0"
+    },
+    "PRU-93": {
+      "introduced": "1.0.0"
+    },
+    "PRU-94": {
+      "introduced": "1.0.0"
+    },
+    "PRU-95": {
+      "introduced": "1.0.0"
+    },
+    "PRU-96": {
+      "introduced": "1.0.0"
+    },
+    "PRU-97": {
+      "introduced": "1.0.0"
+    },
+    "PRU-98": {
+      "introduced": "1.0.0"
+    },
+    "PRU-99": {
+      "introduced": "1.0.0"
+    },
+    "PRU-100": {
+      "introduced": "1.0.0",
+      "changed": "2.0.0"
+    },
+    "PRU-101": {
+      "introduced": "1.0.0"
+    },
+    "PRU-102": {
+      "introduced": "1.0.0"
+    },
+    "PRU-103": {
+      "introduced": "1.0.0"
+    },
+    "PRU-104": {
+      "introduced": "1.0.0"
+    },
+    "PRU-110": {
+      "introduced": "1.0.0"
+    },
+    "PRU-111": {
+      "introduced": "1.0.0",
+      "changed": "2.0.0"
+    },
+    "PRU-112": {
+      "introduced": "1.0.0"
+    },
+    "PRU-113": {
+      "introduced": "1.0.0"
+    },
+    "PRU-114": {
+      "introduced": "1.0.0"
+    },
+    "PRU-115": {
+      "introduced": "1.0.0"
+    },
+    "PRU-120": {
+      "introduced": "1.0.0"
+    },
+    "PRU-121": {
+      "introduced": "1.0.0"
+    },
+    "PRU-122": {
+      "introduced": "1.0.0"
+    },
+    "PRU-123": {
+      "introduced": "1.0.0"
+    },
+    "PRU-124": {
+      "introduced": "1.0.0"
+    },
+    "PRU-125": {
+      "introduced": "1.0.0"
+    },
+    "PRU-126": {
+      "introduced": "1.0.0"
+    },
+    "PRU-127": {
+      "introduced": "1.0.0"
+    },
+    "PRU-128": {
+      "introduced": "1.0.0"
+    },
+    "PRU-129": {
+      "introduced": "1.0.0"
+    },
+    "PRU-130": {
+      "introduced": "1.0.0"
+    },
+    "PRU-140": {
+      "introduced": "1.0.0"
+    },
+    "PRU-141": {
+      "introduced": "1.0.0"
+    },
+    "PRU-142": {
+      "introduced": "1.0.0"
+    },
+    "PRU-150": {
+      "introduced": "1.0.0",
+      "changed": "2.0.0"
+    },
+    "PRU-151": {
+      "introduced": "1.0.0",
+      "changed": "2.0.0"
+    },
+    "PRU-152": {
+      "introduced": "2.0.0"
+    },
+    "PRU-153": {
+      "introduced": "2.0.0"
+    },
+    "PRU-154": {
+      "introduced": "2.0.0"
+    },
+    "PRU-155": {
+      "introduced": "2.0.0"
+    },
+    "PRU-156": {
+      "introduced": "2.0.0"
+    },
+    "PRU-157": {
+      "introduced": "2.0.0"
+    },
+    "PRU-158": {
+      "introduced": "2.0.0"
+    },
+    "PRU-159": {
+      "introduced": "2.0.0"
+    },
+    "PRU-160": {
+      "introduced": "1.0.0"
+    },
+    "PRU-161": {
+      "introduced": "1.0.0"
+    },
+    "PRU-162": {
+      "introduced": "1.0.0"
+    },
+    "PRU-163": {
+      "introduced": "1.0.0"
+    },
+    "PRU-164": {
+      "introduced": "1.0.0"
+    },
+    "PRU-165": {
+      "introduced": "1.0.0"
+    },
+    "PRU-166": {
+      "introduced": "1.0.0"
+    },
+    "PRU-167": {
+      "introduced": "1.0.0"
+    },
+    "PRU-168": {
+      "introduced": "1.0.0"
+    },
+    "PRU-169": {
+      "introduced": "1.0.0"
+    },
+    "PRU-170": {
+      "introduced": "1.0.0"
+    },
+    "PRU-171": {
+      "introduced": "1.0.0"
+    },
+    "PRU-172": {
+      "introduced": "1.0.0"
+    },
+    "PRU-173": {
+      "introduced": "1.0.0"
+    },
+    "PRU-174": {
+      "introduced": "1.0.0"
+    },
+    "PRU-175": {
+      "introduced": "1.0.0"
+    },
+    "PRU-176": {
+      "introduced": "1.0.0"
+    },
+    "PRU-177": {
+      "introduced": "1.0.0"
+    },
+    "PRU-178": {
+      "introduced": "1.0.0"
+    },
+    "PRU-179": {
+      "introduced": "1.0.0"
+    },
+    "PRU-180": {
+      "introduced": "1.0.0"
+    },
+    "PRU-181": {
+      "introduced": "1.0.0"
+    },
+    "PRU-182": {
+      "introduced": "1.0.0"
+    },
+    "PRU-190": {
+      "introduced": "1.0.0"
+    },
+    "PRU-191": {
+      "introduced": "1.0.0"
+    },
+    "PRU-192": {
+      "introduced": "1.0.0"
+    },
+    "PRU-193": {
+      "introduced": "1.0.0"
+    },
+    "PRU-194": {
+      "introduced": "1.0.0"
+    },
+    "PRU-195": {
+      "introduced": "1.0.0"
+    },
+    "PRU-196": {
+      "introduced": "1.0.0"
+    },
+    "PRU-197": {
+      "introduced": "1.0.0"
+    },
+    "PRU-198": {
+      "introduced": "1.0.0"
+    },
+    "PRU-199": {
+      "introduced": "1.0.0"
+    },
+    "PRU-200": {
+      "introduced": "1.0.0"
+    },
+    "PRU-210": {
+      "introduced": "1.0.0"
+    },
+    "PRU-211": {
+      "introduced": "1.0.0"
+    },
+    "PRU-212": {
+      "introduced": "1.0.0"
+    },
+    "PRU-213": {
+      "introduced": "1.0.0"
+    },
+    "PRU-214": {
+      "introduced": "1.0.0"
+    },
+    "PRU-215": {
+      "introduced": "1.0.0"
+    },
+    "PRU-216": {
+      "introduced": "1.0.0"
+    },
+    "PRU-217": {
+      "introduced": "1.0.0"
+    },
+    "PRU-218": {
+      "introduced": "1.0.0"
+    },
+    "PRU-219": {
+      "introduced": "1.0.0"
+    },
+    "PRU-220": {
+      "introduced": "1.0.0"
+    },
+    "PRU-221": {
+      "introduced": "1.0.0"
+    },
+    "PRU-222": {
+      "introduced": "1.0.0"
+    },
+    "PRU-223": {
+      "introduced": "1.0.0"
+    },
+    "PRU-224": {
+      "introduced": "1.0.0"
+    },
+    "PRU-225": {
+      "introduced": "1.0.0"
+    },
+    "PRU-226": {
+      "introduced": "1.0.0"
+    },
+    "PRU-227": {
+      "introduced": "1.0.0"
+    },
+    "PRU-228": {
+      "introduced": "1.0.0"
+    },
+    "PRU-229": {
+      "introduced": "1.0.0"
+    },
+    "PRU-230": {
+      "introduced": "1.0.0"
+    },
+    "PRU-231": {
+      "introduced": "1.0.0"
+    },
+    "PRU-232": {
+      "introduced": "1.0.0"
+    },
+    "PRU-233": {
+      "introduced": "1.0.0"
+    },
+    "PRU-234": {
+      "introduced": "1.0.0"
+    },
+    "PRU-235": {
+      "introduced": "1.0.0"
+    },
+    "PRU-236": {
+      "introduced": "1.0.0"
+    },
+    "PRU-237": {
+      "introduced": "1.0.0"
+    },
+    "PRU-238": {
+      "introduced": "1.0.0"
+    },
+    "PRU-239": {
+      "introduced": "1.0.0"
+    },
+    "PRU-240": {
+      "introduced": "2.0.0"
+    },
+    "PRU-241": {
+      "introduced": "2.0.0"
+    },
+    "PRU-242": {
+      "introduced": "2.0.0"
+    },
+    "PRU-243": {
+      "introduced": "2.0.0"
+    },
+    "PRU-244": {
+      "introduced": "2.0.0"
+    },
+    "PRU-245": {
+      "introduced": "2.0.0"
+    },
+    "PRU-246": {
+      "introduced": "2.0.0"
+    },
+    "PRU-247": {
+      "introduced": "2.0.0"
+    },
+    "PRU-250": {
+      "introduced": "2.0.0"
+    },
+    "PRU-251": {
+      "introduced": "2.0.0"
+    },
+    "PRU-252": {
+      "introduced": "2.0.0"
+    },
+    "PRU-253": {
+      "introduced": "2.0.0"
+    },
+    "PRU-254": {
+      "introduced": "2.0.0"
+    },
+    "PRU-255": {
+      "introduced": "2.0.0"
+    },
+    "PRU-256": {
+      "introduced": "2.0.0"
+    },
+    "PRU-257": {
+      "introduced": "2.0.0"
+    },
+    "PRU-258": {
+      "introduced": "2.0.0"
+    },
+    "PRU-259": {
+      "introduced": "2.0.0"
+    },
+    "PRU-260": {
+      "introduced": "2.0.0"
+    },
+    "PRU-261": {
+      "introduced": "2.0.0"
+    },
+    "PRU-262": {
+      "introduced": "2.0.0"
+    },
+    "PRU-263": {
+      "introduced": "2.0.0"
+    },
+    "PRU-264": {
+      "introduced": "2.0.0"
+    },
+    "PRU-265": {
+      "introduced": "2.0.0"
+    },
+    "PRU-266": {
+      "introduced": "2.0.0"
+    },
+    "PRU-267": {
+      "introduced": "2.0.0"
+    }
+  }
+}

@@ -1,0 +1,5275 @@
+{
+  "generatedBy": "Prumo protocol compiler",
+  "protocolVersion": "2.0.0",
+  "sourceHash": "9b0eec856ee7d76db69b916ccdb813a5294c9382620bacc09e8abd59c6709364",
+  "ruleCount": 201,
+  "ruleRange": {
+    "first": "PRU-01",
+    "last": "PRU-267"
+  },
+  "sections": [
+    {
+      "number": 0,
+      "title": "Session bootstrap",
+      "line": 39,
+      "rules": [
+        "PRU-01",
+        "PRU-02",
+        "PRU-03",
+        "PRU-04",
+        "PRU-05"
+      ]
+    },
+    {
+      "number": 1,
+      "title": "Density per round",
+      "line": 80,
+      "rules": [
+        "PRU-10",
+        "PRU-11",
+        "PRU-12",
+        "PRU-13",
+        "PRU-14",
+        "PRU-15",
+        "PRU-16",
+        "PRU-17"
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Code guidelines",
+      "line": 106,
+      "rules": [
+        "PRU-20",
+        "PRU-21",
+        "PRU-22",
+        "PRU-23",
+        "PRU-24",
+        "PRU-25",
+        "PRU-26",
+        "PRU-27",
+        "PRU-28",
+        "PRU-29"
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Communication guidelines",
+      "line": 130,
+      "rules": [
+        "PRU-30",
+        "PRU-31",
+        "PRU-32",
+        "PRU-33",
+        "PRU-34",
+        "PRU-35",
+        "PRU-36",
+        "PRU-37"
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Ambiguity and questions",
+      "line": 152,
+      "rules": [
+        "PRU-40",
+        "PRU-41",
+        "PRU-42",
+        "PRU-43",
+        "PRU-44",
+        "PRU-45",
+        "PRU-46"
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Specification",
+      "line": 175,
+      "rules": [
+        "PRU-50",
+        "PRU-51",
+        "PRU-52",
+        "PRU-53",
+        "PRU-54"
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Internal tools",
+      "line": 198,
+      "rules": [
+        "PRU-60",
+        "PRU-61",
+        "PRU-62",
+        "PRU-63",
+        "PRU-64",
+        "PRU-65",
+        "PRU-66",
+        "PRU-67",
+        "PRU-68"
+      ]
+    },
+    {
+      "number": 7,
+      "title": "Subagents (expensive resource, restricted use)",
+      "line": 222,
+      "rules": [
+        "PRU-70",
+        "PRU-71",
+        "PRU-72",
+        "PRU-73",
+        "PRU-74",
+        "PRU-75",
+        "PRU-76",
+        "PRU-77"
+      ]
+    },
+    {
+      "number": 8,
+      "title": "Worktrees",
+      "line": 253,
+      "rules": [
+        "PRU-80",
+        "PRU-81",
+        "PRU-82",
+        "PRU-83",
+        "PRU-84",
+        "PRU-85"
+      ]
+    },
+    {
+      "number": 9,
+      "title": "Git, versioning, and commits",
+      "line": 280,
+      "rules": [
+        "PRU-90",
+        "PRU-91",
+        "PRU-92",
+        "PRU-93",
+        "PRU-94",
+        "PRU-95",
+        "PRU-96",
+        "PRU-97",
+        "PRU-98",
+        "PRU-99"
+      ]
+    },
+    {
+      "number": 10,
+      "title": "MapSource.md",
+      "line": 347,
+      "rules": [
+        "PRU-100",
+        "PRU-101",
+        "PRU-102",
+        "PRU-103",
+        "PRU-104"
+      ]
+    },
+    {
+      "number": 11,
+      "title": "Self-audit and preventive bug hunting",
+      "line": 402,
+      "rules": [
+        "PRU-110",
+        "PRU-111",
+        "PRU-112",
+        "PRU-113",
+        "PRU-114",
+        "PRU-115"
+      ]
+    },
+    {
+      "number": 12,
+      "title": "Public text and the fight against AI slop",
+      "line": 428,
+      "rules": [
+        "PRU-120",
+        "PRU-121",
+        "PRU-122",
+        "PRU-123",
+        "PRU-124",
+        "PRU-125",
+        "PRU-126",
+        "PRU-127",
+        "PRU-128",
+        "PRU-129",
+        "PRU-130"
+      ]
+    },
+    {
+      "number": 13,
+      "title": "README.md",
+      "line": 484,
+      "rules": [
+        "PRU-140",
+        "PRU-141",
+        "PRU-142"
+      ]
+    },
+    {
+      "number": 14,
+      "title": "Delivery gate",
+      "line": 506,
+      "rules": [
+        "PRU-150",
+        "PRU-151"
+      ]
+    },
+    {
+      "number": 15,
+      "title": "Honest verdict: criticism without flattery",
+      "line": 523,
+      "rules": [
+        "PRU-152",
+        "PRU-153",
+        "PRU-154",
+        "PRU-155",
+        "PRU-156",
+        "PRU-157",
+        "PRU-158",
+        "PRU-159"
+      ]
+    },
+    {
+      "number": 16,
+      "title": "Clean Code in practice",
+      "line": 587,
+      "rules": [
+        "PRU-160",
+        "PRU-161",
+        "PRU-162",
+        "PRU-163",
+        "PRU-164",
+        "PRU-165",
+        "PRU-166",
+        "PRU-167",
+        "PRU-168",
+        "PRU-169",
+        "PRU-170",
+        "PRU-171",
+        "PRU-172",
+        "PRU-173",
+        "PRU-174",
+        "PRU-175",
+        "PRU-176",
+        "PRU-177",
+        "PRU-178",
+        "PRU-179",
+        "PRU-180",
+        "PRU-181",
+        "PRU-182"
+      ]
+    },
+    {
+      "number": 17,
+      "title": "Diagrams with Archify",
+      "line": 719,
+      "rules": [
+        "PRU-190",
+        "PRU-191",
+        "PRU-192",
+        "PRU-193",
+        "PRU-194",
+        "PRU-195",
+        "PRU-196",
+        "PRU-197",
+        "PRU-198",
+        "PRU-199",
+        "PRU-200"
+      ]
+    },
+    {
+      "number": 18,
+      "title": "Security and personal-data audit",
+      "line": 797,
+      "rules": [
+        "PRU-210",
+        "PRU-211",
+        "PRU-212",
+        "PRU-213",
+        "PRU-214",
+        "PRU-215",
+        "PRU-216",
+        "PRU-217",
+        "PRU-218",
+        "PRU-219",
+        "PRU-220",
+        "PRU-221",
+        "PRU-222",
+        "PRU-223",
+        "PRU-224",
+        "PRU-225",
+        "PRU-226",
+        "PRU-227",
+        "PRU-228",
+        "PRU-229",
+        "PRU-230",
+        "PRU-231",
+        "PRU-232",
+        "PRU-233",
+        "PRU-234",
+        "PRU-235",
+        "PRU-236",
+        "PRU-237",
+        "PRU-238",
+        "PRU-239"
+      ]
+    },
+    {
+      "number": 19,
+      "title": "Hypothesis-driven debugging",
+      "line": 942,
+      "rules": [
+        "PRU-240",
+        "PRU-241",
+        "PRU-242",
+        "PRU-243",
+        "PRU-244",
+        "PRU-245",
+        "PRU-246",
+        "PRU-247"
+      ]
+    },
+    {
+      "number": 20,
+      "title": "Protocol integrity and runtime",
+      "line": 964,
+      "rules": [
+        "PRU-250",
+        "PRU-251",
+        "PRU-252",
+        "PRU-253",
+        "PRU-254",
+        "PRU-255",
+        "PRU-256",
+        "PRU-257",
+        "PRU-258",
+        "PRU-259",
+        "PRU-260",
+        "PRU-261",
+        "PRU-262",
+        "PRU-263",
+        "PRU-264",
+        "PRU-265",
+        "PRU-266",
+        "PRU-267"
+      ]
+    },
+    {
+      "appendix": "A",
+      "title": "Study references",
+      "line": 1016,
+      "rules": []
+    }
+  ],
+  "chapters": [
+    {
+      "id": "coding",
+      "title": "Coding",
+      "sections": [
+        1,
+        2,
+        6,
+        11,
+        14,
+        16
+      ],
+      "defaultLoad": true,
+      "nonSuppressible": false,
+      "rules": [
+        "PRU-10",
+        "PRU-11",
+        "PRU-12",
+        "PRU-13",
+        "PRU-14",
+        "PRU-15",
+        "PRU-16",
+        "PRU-17",
+        "PRU-20",
+        "PRU-21",
+        "PRU-22",
+        "PRU-23",
+        "PRU-24",
+        "PRU-25",
+        "PRU-26",
+        "PRU-27",
+        "PRU-28",
+        "PRU-29",
+        "PRU-60",
+        "PRU-61",
+        "PRU-62",
+        "PRU-63",
+        "PRU-64",
+        "PRU-65",
+        "PRU-66",
+        "PRU-67",
+        "PRU-68",
+        "PRU-110",
+        "PRU-111",
+        "PRU-112",
+        "PRU-113",
+        "PRU-114",
+        "PRU-115",
+        "PRU-150",
+        "PRU-151",
+        "PRU-160",
+        "PRU-161",
+        "PRU-162",
+        "PRU-163",
+        "PRU-164",
+        "PRU-165",
+        "PRU-166",
+        "PRU-167",
+        "PRU-168",
+        "PRU-169",
+        "PRU-170",
+        "PRU-171",
+        "PRU-172",
+        "PRU-173",
+        "PRU-174",
+        "PRU-175",
+        "PRU-176",
+        "PRU-177",
+        "PRU-178",
+        "PRU-179",
+        "PRU-180",
+        "PRU-181",
+        "PRU-182"
+      ],
+      "tokens": 4660,
+      "triggers": [
+        {
+          "id": "source-edit",
+          "description": "task edits source code",
+          "signals": [
+            "edit",
+            "feature",
+            "implement"
+          ],
+          "paths": [
+            "\\.(m?[jt]sx?|py|go|rs|java|kt|rb|php|cs|c|cc|cpp|h|hpp|swift|scala|ex|exs|dart|lua|sh|ps1)$"
+          ],
+          "keywords": [
+            "implement",
+            "add",
+            "create",
+            "write",
+            "refactor",
+            "fix",
+            "change",
+            "update",
+            "build"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "specification",
+      "title": "Specification and questions",
+      "sections": [
+        4,
+        5
+      ],
+      "defaultLoad": true,
+      "nonSuppressible": false,
+      "rules": [
+        "PRU-40",
+        "PRU-41",
+        "PRU-42",
+        "PRU-43",
+        "PRU-44",
+        "PRU-45",
+        "PRU-46",
+        "PRU-50",
+        "PRU-51",
+        "PRU-52",
+        "PRU-53",
+        "PRU-54"
+      ],
+      "tokens": 930,
+      "triggers": [
+        {
+          "id": "new-work",
+          "description": "task starts new work or the request is ambiguous",
+          "signals": [
+            "feature",
+            "implement",
+            "ambiguous",
+            "question"
+          ],
+          "keywords": [
+            "spec",
+            "requirement",
+            "should i",
+            "which",
+            "ambiguous",
+            "clarify",
+            "option"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "communication",
+      "title": "Communication",
+      "sections": [
+        3
+      ],
+      "defaultLoad": false,
+      "nonSuppressible": false,
+      "rules": [
+        "PRU-30",
+        "PRU-31",
+        "PRU-32",
+        "PRU-33",
+        "PRU-34",
+        "PRU-35",
+        "PRU-36",
+        "PRU-37"
+      ],
+      "tokens": 688,
+      "triggers": [
+        {
+          "id": "long-report",
+          "description": "task ends with a report, summary or explanation",
+          "signals": [
+            "report",
+            "summary",
+            "explain"
+          ],
+          "keywords": [
+            "summarize",
+            "report",
+            "explain",
+            "write up"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "judgment",
+      "title": "Honest verdict",
+      "sections": [
+        15
+      ],
+      "defaultLoad": false,
+      "nonSuppressible": false,
+      "rules": [
+        "PRU-152",
+        "PRU-153",
+        "PRU-154",
+        "PRU-155",
+        "PRU-156",
+        "PRU-157",
+        "PRU-158",
+        "PRU-159"
+      ],
+      "tokens": 1758,
+      "triggers": [
+        {
+          "id": "opinion-request",
+          "description": "the user asks for an opinion or proposes an idea, design, library or plan",
+          "signals": [
+            "opinion-request",
+            "proposal",
+            "pushback"
+          ],
+          "keywords": [
+            "what do you think",
+            "is it a good idea",
+            "good idea",
+            "should we",
+            "i want to use",
+            "i plan to",
+            "is this ok",
+            "thoughts",
+            "opinion",
+            "review my",
+            "proposal",
+            "approach"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "debugging",
+      "title": "Hypothesis-driven debugging",
+      "sections": [
+        19
+      ],
+      "defaultLoad": false,
+      "nonSuppressible": false,
+      "rules": [
+        "PRU-240",
+        "PRU-241",
+        "PRU-242",
+        "PRU-243",
+        "PRU-244",
+        "PRU-245",
+        "PRU-246",
+        "PRU-247"
+      ],
+      "tokens": 828,
+      "triggers": [
+        {
+          "id": "failing-test",
+          "description": "failing test detected",
+          "signals": [
+            "failing-test",
+            "test-failure"
+          ],
+          "keywords": [
+            "failing test",
+            "test fails",
+            "tests fail",
+            "assertion",
+            "expected .* got",
+            "red test"
+          ]
+        },
+        {
+          "id": "runtime-error",
+          "description": "runtime error, exception or stack trace present",
+          "signals": [
+            "runtime-error",
+            "exception",
+            "crash"
+          ],
+          "keywords": [
+            "error",
+            "exception",
+            "stack trace",
+            "traceback",
+            "crash",
+            "panic",
+            "segfault",
+            "bug",
+            "broken",
+            "regression",
+            "does not work",
+            "doesn't work",
+            "not working"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "security",
+      "title": "Security and personal data",
+      "sections": [
+        18
+      ],
+      "defaultLoad": false,
+      "nonSuppressible": true,
+      "rules": [
+        "PRU-210",
+        "PRU-211",
+        "PRU-212",
+        "PRU-213",
+        "PRU-214",
+        "PRU-215",
+        "PRU-216",
+        "PRU-217",
+        "PRU-218",
+        "PRU-219",
+        "PRU-220",
+        "PRU-221",
+        "PRU-222",
+        "PRU-223",
+        "PRU-224",
+        "PRU-225",
+        "PRU-226",
+        "PRU-227",
+        "PRU-228",
+        "PRU-229",
+        "PRU-230",
+        "PRU-231",
+        "PRU-232",
+        "PRU-233",
+        "PRU-234",
+        "PRU-235",
+        "PRU-236",
+        "PRU-237",
+        "PRU-238",
+        "PRU-239"
+      ],
+      "tokens": 3826,
+      "triggers": [
+        {
+          "id": "auth-surface",
+          "description": "authentication, session or authorization code touched",
+          "signals": [
+            "auth",
+            "security"
+          ],
+          "paths": [
+            "auth",
+            "session",
+            "login",
+            "logout",
+            "password",
+            "passwd",
+            "token",
+            "jwt",
+            "oauth",
+            "sso",
+            "saml",
+            "permission",
+            "role",
+            "acl",
+            "policy",
+            "tenant",
+            "cookie",
+            "csrf",
+            "2fa",
+            "mfa",
+            "otp",
+            "webauthn",
+            "passkey"
+          ],
+          "keywords": [
+            "auth",
+            "login",
+            "session",
+            "token",
+            "password",
+            "permission",
+            "role",
+            "tenant",
+            "cookie",
+            "jwt",
+            "oauth",
+            "2fa",
+            "mfa"
+          ]
+        },
+        {
+          "id": "external-input",
+          "description": "external input, upload, webhook or queue handled",
+          "signals": [
+            "external-input",
+            "upload",
+            "webhook"
+          ],
+          "paths": [
+            "upload",
+            "webhook",
+            "handler",
+            "controller",
+            "route",
+            "router",
+            "endpoint",
+            "api/",
+            "form",
+            "queue",
+            "consumer",
+            "listener",
+            "middleware"
+          ],
+          "keywords": [
+            "upload",
+            "webhook",
+            "form",
+            "query string",
+            "header",
+            "user input",
+            "request body",
+            "payload",
+            "endpoint",
+            "route"
+          ]
+        },
+        {
+          "id": "data-access",
+          "description": "database, filesystem, shell or dynamic URL access",
+          "signals": [
+            "database",
+            "filesystem",
+            "shell"
+          ],
+          "paths": [
+            "db",
+            "database",
+            "sql",
+            "migration",
+            "repository",
+            "repositories",
+            "model",
+            "models",
+            "schema",
+            "prisma",
+            "orm",
+            "query",
+            "storage",
+            "fs",
+            "exec",
+            "spawn"
+          ],
+          "keywords": [
+            "database",
+            "sql",
+            "query",
+            "migration",
+            "filesystem",
+            "shell command",
+            "exec",
+            "spawn",
+            "fetch url",
+            "ssrf"
+          ]
+        },
+        {
+          "id": "personal-data",
+          "description": "personal, financial, health or minors' data handled",
+          "signals": [
+            "pii",
+            "personal-data"
+          ],
+          "paths": [
+            "user",
+            "users",
+            "profile",
+            "customer",
+            "patient",
+            "payment",
+            "billing",
+            "invoice",
+            "card",
+            "pii",
+            "gdpr",
+            "lgpd",
+            "consent"
+          ],
+          "keywords": [
+            "personal data",
+            "pii",
+            "gdpr",
+            "lgpd",
+            "email address",
+            "phone number",
+            "cpf",
+            "ssn",
+            "health",
+            "payment",
+            "credit card",
+            "consent",
+            "minor"
+          ]
+        },
+        {
+          "id": "crypto-secrets",
+          "description": "cryptography, hashing, randomness or secrets touched",
+          "signals": [
+            "crypto",
+            "secrets"
+          ],
+          "paths": [
+            "crypto",
+            "hash",
+            "cipher",
+            "encrypt",
+            "sign",
+            "random",
+            "secret",
+            "\\.env",
+            "credential",
+            "vault",
+            "key"
+          ],
+          "keywords": [
+            "encrypt",
+            "decrypt",
+            "hash",
+            "hmac",
+            "signature",
+            "random",
+            "secret",
+            "api key",
+            "credential",
+            ".env",
+            "vault"
+          ]
+        },
+        {
+          "id": "supply-chain",
+          "description": "dependency manifest, CI, deploy or environment variable touched",
+          "signals": [
+            "dependency",
+            "ci",
+            "deploy"
+          ],
+          "paths": [
+            "package\\.json$",
+            "package-lock\\.json$",
+            "requirements.*\\.txt$",
+            "pyproject\\.toml$",
+            "Cargo\\.toml$",
+            "go\\.mod$",
+            "Gemfile$",
+            "\\.github/",
+            "\\.gitlab-ci",
+            "Dockerfile",
+            "docker-compose",
+            "\\.ya?ml$",
+            "deploy",
+            "terraform",
+            "\\.tf$"
+          ],
+          "keywords": [
+            "dependency",
+            "npm install",
+            "pip install",
+            "ci pipeline",
+            "deploy",
+            "docker",
+            "environment variable"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "git",
+      "title": "Git, worktrees and commits",
+      "sections": [
+        8,
+        9
+      ],
+      "defaultLoad": false,
+      "nonSuppressible": false,
+      "rules": [
+        "PRU-80",
+        "PRU-81",
+        "PRU-82",
+        "PRU-83",
+        "PRU-84",
+        "PRU-85",
+        "PRU-90",
+        "PRU-91",
+        "PRU-92",
+        "PRU-93",
+        "PRU-94",
+        "PRU-95",
+        "PRU-96",
+        "PRU-97",
+        "PRU-98",
+        "PRU-99"
+      ],
+      "tokens": 1306,
+      "triggers": [
+        {
+          "id": "vcs-operation",
+          "description": "commit, branch, worktree or release work",
+          "signals": [
+            "commit",
+            "branch",
+            "worktree",
+            "release"
+          ],
+          "keywords": [
+            "commit",
+            "branch",
+            "worktree",
+            "merge",
+            "rebase",
+            "release",
+            "changelog",
+            "version bump",
+            "tag",
+            "gitignore",
+            "push",
+            "pull request"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "architecture",
+      "title": "Architecture and diagrams",
+      "sections": [
+        17
+      ],
+      "defaultLoad": false,
+      "nonSuppressible": false,
+      "rules": [
+        "PRU-190",
+        "PRU-191",
+        "PRU-192",
+        "PRU-193",
+        "PRU-194",
+        "PRU-195",
+        "PRU-196",
+        "PRU-197",
+        "PRU-198",
+        "PRU-199",
+        "PRU-200"
+      ],
+      "tokens": 1175,
+      "triggers": [
+        {
+          "id": "structural-change",
+          "description": "structural refactor, module boundary or diagram work",
+          "signals": [
+            "refactor",
+            "architecture",
+            "diagram"
+          ],
+          "keywords": [
+            "architecture",
+            "restructure",
+            "\\bmodule boundar\\w*",
+            "structural refactor\\w*",
+            "\\brefactor\\w*\\b.*\\b(module|package|layer|boundar\\w*|service|structure)s?\\b",
+            "diagram",
+            "archify",
+            "mermaid",
+            "extract module",
+            "split package",
+            "monorepo"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mapsource",
+      "title": "Session bootstrap and MapSource.md",
+      "sections": [
+        0,
+        10
+      ],
+      "defaultLoad": false,
+      "nonSuppressible": false,
+      "rules": [
+        "PRU-01",
+        "PRU-02",
+        "PRU-03",
+        "PRU-04",
+        "PRU-05",
+        "PRU-100",
+        "PRU-101",
+        "PRU-102",
+        "PRU-103",
+        "PRU-104"
+      ],
+      "tokens": 1658,
+      "triggers": [
+        {
+          "id": "state-work",
+          "description": "MapSource.md, project state or session bootstrap work",
+          "signals": [
+            "mapsource",
+            "bootstrap",
+            "refactor",
+            "architecture"
+          ],
+          "paths": [
+            "MapSource\\.md$"
+          ],
+          "keywords": [
+            "mapsource",
+            "project state",
+            "decision record",
+            "suspicion zone",
+            "root cause"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "public-writing",
+      "title": "Public text, README and interface copy",
+      "sections": [
+        12,
+        13
+      ],
+      "defaultLoad": false,
+      "nonSuppressible": false,
+      "rules": [
+        "PRU-120",
+        "PRU-121",
+        "PRU-122",
+        "PRU-123",
+        "PRU-124",
+        "PRU-125",
+        "PRU-126",
+        "PRU-127",
+        "PRU-128",
+        "PRU-129",
+        "PRU-130",
+        "PRU-140",
+        "PRU-141",
+        "PRU-142"
+      ],
+      "tokens": 1454,
+      "triggers": [
+        {
+          "id": "public-copy",
+          "description": "README, interface text, changelog or other public copy",
+          "signals": [
+            "public-copy",
+            "readme",
+            "docs"
+          ],
+          "paths": [
+            "README",
+            "CHANGELOG",
+            "docs/",
+            "\\.mdx?$",
+            "locales?/",
+            "i18n",
+            "copy",
+            "landing"
+          ],
+          "keywords": [
+            "readme",
+            "changelog",
+            "release notes",
+            "documentation",
+            "copy",
+            "microcopy",
+            "error message",
+            "button text",
+            "landing page",
+            "blog"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "subagents",
+      "title": "Subagents",
+      "sections": [
+        7
+      ],
+      "defaultLoad": false,
+      "nonSuppressible": false,
+      "rules": [
+        "PRU-70",
+        "PRU-71",
+        "PRU-72",
+        "PRU-73",
+        "PRU-74",
+        "PRU-75",
+        "PRU-76",
+        "PRU-77"
+      ],
+      "tokens": 614,
+      "triggers": [
+        {
+          "id": "delegation",
+          "description": "considering a subagent or a parallel work front",
+          "signals": [
+            "subagent",
+            "parallel"
+          ],
+          "keywords": [
+            "subagent",
+            "sub-agent",
+            "spawn",
+            "delegate",
+            "parallel agents",
+            "worker agent",
+            "task tool"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "protocol",
+      "title": "Protocol integrity and runtime",
+      "sections": [
+        20
+      ],
+      "defaultLoad": false,
+      "nonSuppressible": false,
+      "rules": [
+        "PRU-250",
+        "PRU-251",
+        "PRU-252",
+        "PRU-253",
+        "PRU-254",
+        "PRU-255",
+        "PRU-256",
+        "PRU-257",
+        "PRU-258",
+        "PRU-259",
+        "PRU-260",
+        "PRU-261",
+        "PRU-262",
+        "PRU-263",
+        "PRU-264",
+        "PRU-265",
+        "PRU-266",
+        "PRU-267"
+      ],
+      "tokens": 1433,
+      "triggers": [
+        {
+          "id": "prumo-self",
+          "description": "working on Prumo itself, its installer or its generated artifacts",
+          "signals": [
+            "prumo"
+          ],
+          "paths": [
+            "PRUMO\\.md$",
+            "prumo",
+            "\\.prumo/"
+          ],
+          "keywords": [
+            "prumo",
+            "protocol compiler",
+            "kernel",
+            "chapter",
+            "manifest",
+            "installer",
+            "adapter"
+          ]
+        }
+      ]
+    }
+  ],
+  "kernel": {
+    "rules": [
+      "PRU-01",
+      "PRU-05",
+      "PRU-10",
+      "PRU-14",
+      "PRU-16",
+      "PRU-20",
+      "PRU-22",
+      "PRU-24",
+      "PRU-27",
+      "PRU-29",
+      "PRU-30",
+      "PRU-32",
+      "PRU-33",
+      "PRU-35",
+      "PRU-40",
+      "PRU-50",
+      "PRU-51",
+      "PRU-60",
+      "PRU-99",
+      "PRU-111",
+      "PRU-115",
+      "PRU-150",
+      "PRU-151",
+      "PRU-152",
+      "PRU-156",
+      "PRU-158",
+      "PRU-210",
+      "PRU-240",
+      "PRU-242",
+      "PRU-245"
+    ],
+    "tokens": 2184,
+    "budget": 2500
+  },
+  "reminder": {
+    "rules": [
+      "PRU-01",
+      "PRU-05",
+      "PRU-16",
+      "PRU-29",
+      "PRU-33",
+      "PRU-40",
+      "PRU-50",
+      "PRU-60",
+      "PRU-99",
+      "PRU-115",
+      "PRU-152",
+      "PRU-156",
+      "PRU-158",
+      "PRU-210",
+      "PRU-240",
+      "PRU-245"
+    ],
+    "text": "PRUMO PROTOCOL ACTIVE. Protocol 2.0.0, 201 rules (PRU-01 to PRU-267); every rule has a stable id and the kernel is normative. Before reading code or answering, look for MapSource.md in the project root, docs/, .obsidian/ and notes/. (PRU-01) When you finish relevant work, update `MapSource.md`. A session that leaves no trace forces the next one to pay again for the same understanding. (PRU-05) Three executions against the same target without converging and you stop. The problem stopped being the code and became your mental model. Go back to the specification, reread the real source, rebuild the hypothesis from scratch (Section 19). Iterating blind is the most expensive way to be wrong. (PRU-16) The scope is what was asked and what the specification (Section 5) closed. (PRU-29) When it is done and verified, say it is done, without hedging. When it is not verified, say that too. \"Should work\" does not exist: either you ran it, or you declare that you did not. (PRU-33) Never invent a requirement. Never deliver something plausible in place of what was asked. (PRU-40) Before writing code, write what you understood: goal, understanding, scope, out of scope, executable acceptance criteria, assumptions. (PRU-50) No edit to a file whose current content you have not seen in this session. (PRU-60) You commit on your own when the PRU-91 inspection passes in full. You do **not** push, do not open a PR, and do not touch a remote branch without an explicit request from the user. (PRU-99) Either fix it, or warn explicitly. A known and hidden bug is the worst possible outcome. (PRU-115) When the user presents an idea or asks what you think, the first line is the verdict, Bad, Weak, Acceptable or Good, followed by the strongest reason. (PRU-152) When the user pushes back, evaluate the argument. (PRU-156) \"Tested\" means you executed it and read the output in this session. (PRU-158) Enter security-audit mode without being asked whenever the work touches authentication, authorization, external input, database or filesystem or shell access, personal data, cryptography, or a new dependency, CI, deploy or environment variable. (PRU-210) No fix without a command or test that demonstrates the failure deterministically. A bug you cannot reproduce is a bug you cannot prove you fixed. If reproduction needs data or an environment you do not have, say so and ask, instead of fixing in the dark. (PRU-240) A test that reproduces the bug, fails before the change, and passes after it. Without that it is not a fix, it is a coincidence. That test is also what stops the regression the next session would introduce. (PRU-245)",
+    "tokens": 732
+  },
+  "precedence": [
+    "security and privacy",
+    "data integrity",
+    "the user's explicit decision",
+    "an existing public contract",
+    "the active specification",
+    "the repository's convention",
+    "Prumo's own preference"
+  ],
+  "critical": [
+    "PRU-16",
+    "PRU-27",
+    "PRU-33",
+    "PRU-40",
+    "PRU-51",
+    "PRU-115",
+    "PRU-152",
+    "PRU-156",
+    "PRU-158",
+    "PRU-210",
+    "PRU-220",
+    "PRU-223",
+    "PRU-238",
+    "PRU-240",
+    "PRU-245"
+  ],
+  "coverage": {
+    "MANUAL": 149,
+    "BEHAVIOR_EVAL": 31,
+    "DETERMINISTICALLY_TESTED": 16,
+    "ENFORCED": 5
+  },
+  "targets": [
+    "claude",
+    "codex",
+    "cursor",
+    "grok",
+    "gemini"
+  ],
+  "rules": [
+    {
+      "id": "PRU-01",
+      "section": 0,
+      "title": "Before reading code or answering, look for MapSource.md in the project root, doc",
+      "tier": "kernel",
+      "reminder": true,
+      "critical": false,
+      "chapter": "mapsource",
+      "triggers": [
+        "state-work"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 41
+      }
+    },
+    {
+      "id": "PRU-02",
+      "section": 0,
+      "title": "If MapSource.md exists, read it in full before anything else",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "mapsource",
+      "triggers": [
+        "state-work"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 52
+      }
+    },
+    {
+      "id": "PRU-03",
+      "section": 0,
+      "title": "If it does not exist and the project has substance, create it as soon as you hav",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "mapsource",
+      "triggers": [
+        "state-work"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 54
+      }
+    },
+    {
+      "id": "PRU-04",
+      "section": 0,
+      "title": "Read `README.md`, `CLAUDE.md`, `AGENTS.md`, `CONTRIBUTING.md`, and the build con",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "mapsource",
+      "triggers": [
+        "state-work"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 56
+      }
+    },
+    {
+      "id": "PRU-05",
+      "section": 0,
+      "title": "When you finish relevant work, update `MapSource.md`. A session that leaves no t",
+      "tier": "kernel",
+      "reminder": true,
+      "critical": false,
+      "chapter": "mapsource",
+      "triggers": [
+        "state-work"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 58
+      }
+    },
+    {
+      "id": "PRU-10",
+      "section": 1,
+      "title": "In a single delivery, write at the same time: the target code, the tests that co",
+      "tier": "kernel",
+      "reminder": false,
+      "critical": false,
+      "chapter": "coding",
+      "triggers": [
+        "source-edit"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 84
+      }
+    },
+    {
+      "id": "PRU-11",
+      "section": 1,
+      "title": "Before running anything, answer this to yourself: if this fails, what informatio",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "coding",
+      "triggers": [
+        "source-edit"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 86
+      }
+    },
+    {
+      "id": "PRU-12",
+      "section": 1,
+      "title": "Minimum instrumentation for a verification run:",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "coding",
+      "triggers": [
+        "source-edit"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 88
+      }
+    },
+    {
+      "id": "PRU-13",
+      "section": 1,
+      "title": "Do not abort on the first error. Write the verifier so it runs every case and pr",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "coding",
+      "triggers": [
+        "source-edit"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 96
+      }
+    },
+    {
+      "id": "PRU-14",
+      "section": 1,
+      "title": "The batching rule",
+      "tier": "kernel",
+      "reminder": false,
+      "critical": false,
+      "chapter": "coding",
+      "triggers": [
+        "source-edit"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 98
+      }
+    },
+    {
+      "id": "PRU-15",
+      "section": 1,
+      "title": "Code Mode",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "coding",
+      "triggers": [
+        "source-edit"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 100
+      }
+    },
+    {
+      "id": "PRU-16",
+      "section": 1,
+      "title": "Hard iteration limit",
+      "tier": "kernel",
+      "reminder": true,
+      "critical": true,
+      "chapter": "coding",
+      "triggers": [
+        "source-edit"
+      ],
+      "references": [],
+      "enforcement": "BEHAVIOR_EVAL",
+      "evalSuite": "three-run-breaker",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 102
+      }
+    },
+    {
+      "id": "PRU-17",
+      "section": 1,
+      "title": "Independent tool calls go together in the same round. Serialize only when there ",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "coding",
+      "triggers": [
+        "source-edit"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 104
+      }
+    },
+    {
+      "id": "PRU-20",
+      "section": 2,
+      "title": "No decorative comments",
+      "tier": "kernel",
+      "reminder": false,
+      "critical": false,
+      "chapter": "coding",
+      "triggers": [
+        "source-edit"
+      ],
+      "references": [
+        "PRU-177",
+        "PRU-182"
+      ],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 108
+      }
+    },
+    {
+      "id": "PRU-21",
+      "section": 2,
+      "title": "No dead code",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "coding",
+      "triggers": [
+        "source-edit"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 110
+      }
+    },
+    {
+      "id": "PRU-22",
+      "section": 2,
+      "title": "No placeholder delivered as finished",
+      "tier": "kernel",
+      "reminder": false,
+      "critical": false,
+      "chapter": "coding",
+      "triggers": [
+        "source-edit"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 112
+      }
+    },
+    {
+      "id": "PRU-23",
+      "section": 2,
+      "title": "Full names",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "coding",
+      "triggers": [
+        "source-edit"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 114
+      }
+    },
+    {
+      "id": "PRU-24",
+      "section": 2,
+      "title": "An error is handled or explicitly propagated",
+      "tier": "kernel",
+      "reminder": false,
+      "critical": false,
+      "chapter": "coding",
+      "triggers": [
+        "source-edit"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 116
+      }
+    },
+    {
+      "id": "PRU-25",
+      "section": 2,
+      "title": "Mirror the repository",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "coding",
+      "triggers": [
+        "source-edit"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 118
+      }
+    },
+    {
+      "id": "PRU-26",
+      "section": 2,
+      "title": "A new dependency requires justification",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "coding",
+      "triggers": [
+        "source-edit"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 120
+      }
+    },
+    {
+      "id": "PRU-27",
+      "section": 2,
+      "title": "Secure by default",
+      "tier": "kernel",
+      "reminder": false,
+      "critical": true,
+      "chapter": "coding",
+      "triggers": [
+        "source-edit"
+      ],
+      "references": [],
+      "enforcement": "BEHAVIOR_EVAL",
+      "evalSuite": "security-trigger",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 122
+      }
+    },
+    {
+      "id": "PRU-28",
+      "section": 2,
+      "title": "A public signature is a contract",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "coding",
+      "triggers": [
+        "source-edit"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 124
+      }
+    },
+    {
+      "id": "PRU-29",
+      "section": 2,
+      "title": "No gold-plating",
+      "tier": "kernel",
+      "reminder": true,
+      "critical": false,
+      "chapter": "coding",
+      "triggers": [
+        "source-edit"
+      ],
+      "references": [],
+      "enforcement": "BEHAVIOR_EVAL",
+      "evalSuite": "gold-plating",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 126
+      }
+    },
+    {
+      "id": "PRU-30",
+      "section": 3,
+      "title": "No preamble, no recap of what the user just said, no announcement of what you ar",
+      "tier": "kernel",
+      "reminder": false,
+      "critical": false,
+      "chapter": "communication",
+      "triggers": [
+        "long-report"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 134
+      }
+    },
+    {
+      "id": "PRU-31",
+      "section": 3,
+      "title": "No praise for the request, no \"great question\", no \"good idea\", no \"makes sense\"",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "communication",
+      "triggers": [
+        "long-report"
+      ],
+      "references": [],
+      "enforcement": "BEHAVIOR_EVAL",
+      "evalSuite": "sycophancy",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 136
+      }
+    },
+    {
+      "id": "PRU-32",
+      "section": 3,
+      "title": "Report fact: what was done, what was verified, what failed, what was left out. W",
+      "tier": "kernel",
+      "reminder": false,
+      "critical": false,
+      "chapter": "communication",
+      "triggers": [
+        "long-report"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 138
+      }
+    },
+    {
+      "id": "PRU-33",
+      "section": 3,
+      "title": "When it is done and verified, say it is done, without hedging. When it is not ve",
+      "tier": "kernel",
+      "reminder": true,
+      "critical": true,
+      "chapter": "communication",
+      "triggers": [
+        "long-report"
+      ],
+      "references": [],
+      "enforcement": "BEHAVIOR_EVAL",
+      "evalSuite": "false-verification",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 140
+      }
+    },
+    {
+      "id": "PRU-34",
+      "section": 3,
+      "title": "Direct is not rude to the person",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "communication",
+      "triggers": [
+        "long-report"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 142
+      }
+    },
+    {
+      "id": "PRU-35",
+      "section": 3,
+      "title": "You have a technical opinion and it is stated before executing, with verdict, re",
+      "tier": "kernel",
+      "reminder": false,
+      "critical": false,
+      "chapter": "communication",
+      "triggers": [
+        "long-report"
+      ],
+      "references": [],
+      "enforcement": "BEHAVIOR_EVAL",
+      "evalSuite": "pressure-resistance",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 144
+      }
+    },
+    {
+      "id": "PRU-36",
+      "section": 3,
+      "title": "Decorative tables, ornamental emoji, empty headers, and summaries of the summary",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "communication",
+      "triggers": [
+        "long-report"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 146
+      }
+    },
+    {
+      "id": "PRU-37",
+      "section": 3,
+      "title": "Clarity exception",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "communication",
+      "triggers": [
+        "long-report"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 148
+      }
+    },
+    {
+      "id": "PRU-40",
+      "section": 4,
+      "title": "Never invent a requirement. Never deliver something plausible in place of what w",
+      "tier": "kernel",
+      "reminder": true,
+      "critical": true,
+      "chapter": "specification",
+      "triggers": [
+        "new-work"
+      ],
+      "references": [],
+      "enforcement": "BEHAVIOR_EVAL",
+      "evalSuite": "scope-discipline",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 154
+      }
+    },
+    {
+      "id": "PRU-41",
+      "section": 4,
+      "title": "Ask only when two readings lead to materially different work, a decision only th",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "specification",
+      "triggers": [
+        "new-work"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 156
+      }
+    },
+    {
+      "id": "PRU-42",
+      "section": 4,
+      "title": "Do not ask when the repository convention already answers, when there is an obvi",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "specification",
+      "triggers": [
+        "new-work"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 163
+      }
+    },
+    {
+      "id": "PRU-43",
+      "section": 4,
+      "title": "At most four questions per round. Each with concrete options and one marked as r",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "specification",
+      "triggers": [
+        "new-work"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 165
+      }
+    },
+    {
+      "id": "PRU-44",
+      "section": 4,
+      "title": "Ask in successive rounds until you have enough information for the result to be ",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "specification",
+      "triggers": [
+        "new-work"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 167
+      }
+    },
+    {
+      "id": "PRU-45",
+      "section": 4,
+      "title": "Never repeat a question already answered. An answer obtained becomes a specifica",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "specification",
+      "triggers": [
+        "new-work"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 169
+      }
+    },
+    {
+      "id": "PRU-46",
+      "section": 4,
+      "title": "Unblocked work runs in parallel",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "specification",
+      "triggers": [
+        "new-work"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 171
+      }
+    },
+    {
+      "id": "PRU-50",
+      "section": 5,
+      "title": "Before writing code, write what you understood: goal, understanding, scope, out ",
+      "tier": "kernel",
+      "reminder": true,
+      "critical": false,
+      "chapter": "specification",
+      "triggers": [
+        "new-work"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 177
+      }
+    },
+    {
+      "id": "PRU-51",
+      "section": 5,
+      "title": "The acceptance criteria close the task. You report completion only when they hav",
+      "tier": "kernel",
+      "reminder": false,
+      "critical": true,
+      "chapter": "specification",
+      "triggers": [
+        "new-work"
+      ],
+      "references": [],
+      "enforcement": "BEHAVIOR_EVAL",
+      "evalSuite": "false-verification",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 188
+      }
+    },
+    {
+      "id": "PRU-52",
+      "section": 5,
+      "title": "Separate goal from method",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "specification",
+      "triggers": [
+        "new-work"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 190
+      }
+    },
+    {
+      "id": "PRU-53",
+      "section": 5,
+      "title": "A genuine impossibility does not cancel the rest. Deliver everything that is pos",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "specification",
+      "triggers": [
+        "new-work"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 192
+      }
+    },
+    {
+      "id": "PRU-54",
+      "section": 5,
+      "title": "The specification lives in `MapSource.md` when it exists. Without it, it lives i",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "specification",
+      "triggers": [
+        "new-work"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 194
+      }
+    },
+    {
+      "id": "PRU-60",
+      "section": 6,
+      "title": "Read before editing",
+      "tier": "kernel",
+      "reminder": true,
+      "critical": false,
+      "chapter": "coding",
+      "triggers": [
+        "source-edit"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 202
+      }
+    },
+    {
+      "id": "PRU-61",
+      "section": 6,
+      "title": "Structured search beats exhaustive reading",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "coding",
+      "triggers": [
+        "source-edit"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 204
+      }
+    },
+    {
+      "id": "PRU-62",
+      "section": 6,
+      "title": "Use the LSP when available",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "coding",
+      "triggers": [
+        "source-edit"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 206
+      }
+    },
+    {
+      "id": "PRU-63",
+      "section": 6,
+      "title": "Use documentation search for an external library",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "coding",
+      "triggers": [
+        "source-edit"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 208
+      }
+    },
+    {
+      "id": "PRU-64",
+      "section": 6,
+      "title": "A long process goes to the background",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "coding",
+      "triggers": [
+        "source-edit"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 210
+      }
+    },
+    {
+      "id": "PRU-65",
+      "section": 6,
+      "title": "One script is worth ten commands",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "coding",
+      "triggers": [
+        "source-edit"
+      ],
+      "references": [
+        "PRU-14",
+        "PRU-15"
+      ],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 212
+      }
+    },
+    {
+      "id": "PRU-66",
+      "section": 6,
+      "title": "Write temporary files in the session's scratch directory",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "coding",
+      "triggers": [
+        "source-edit"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 214
+      }
+    },
+    {
+      "id": "PRU-67",
+      "section": 6,
+      "title": "A denied permission is not routed around",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "coding",
+      "triggers": [
+        "source-edit"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 216
+      }
+    },
+    {
+      "id": "PRU-68",
+      "section": 6,
+      "title": "At the end of the task, if any project shortcut or command was discovered and wa",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "coding",
+      "triggers": [
+        "source-edit"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 218
+      }
+    },
+    {
+      "id": "PRU-70",
+      "section": 7,
+      "title": "The default is not to spawn",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "subagents",
+      "triggers": [
+        "delegation"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 226
+      }
+    },
+    {
+      "id": "PRU-71",
+      "section": 7,
+      "title": "Never spawn to read a file",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "subagents",
+      "triggers": [
+        "delegation"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 228
+      }
+    },
+    {
+      "id": "PRU-72",
+      "section": 7,
+      "title": "Never spawn for a task that fits in one pass of your own",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "subagents",
+      "triggers": [
+        "delegation"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 230
+      }
+    },
+    {
+      "id": "PRU-73",
+      "section": 7,
+      "title": "Spawn only when all of these hold at the same time:",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "subagents",
+      "triggers": [
+        "delegation"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 232
+      }
+    },
+    {
+      "id": "PRU-74",
+      "section": 7,
+      "title": "Legitimate cases",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "subagents",
+      "triggers": [
+        "delegation"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 239
+      }
+    },
+    {
+      "id": "PRU-75",
+      "section": 7,
+      "title": "Every spawn carries, mandatorily:",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "subagents",
+      "triggers": [
+        "delegation"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 245
+      }
+    },
+    {
+      "id": "PRU-76",
+      "section": 7,
+      "title": "A subagent's return is critical input, not a verdict",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "subagents",
+      "triggers": [
+        "delegation"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 247
+      }
+    },
+    {
+      "id": "PRU-77",
+      "section": 7,
+      "title": "When the user explicitly asks for a subagent",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "subagents",
+      "triggers": [
+        "delegation"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 249
+      }
+    },
+    {
+      "id": "PRU-80",
+      "section": 8,
+      "title": "A project from scratch:",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "git",
+      "triggers": [
+        "vcs-operation"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 255
+      }
+    },
+    {
+      "id": "PRU-81",
+      "section": 8,
+      "title": "One worktree per independent work front",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "git",
+      "triggers": [
+        "vcs-operation"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 257
+      }
+    },
+    {
+      "id": "PRU-82",
+      "section": 8,
+      "title": "The branch name declares type and target:",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "git",
+      "triggers": [
+        "vcs-operation"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 265
+      }
+    },
+    {
+      "id": "PRU-83",
+      "section": 8,
+      "title": "Two fronts never edit the same tree",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "git",
+      "triggers": [
+        "vcs-operation"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 267
+      }
+    },
+    {
+      "id": "PRU-84",
+      "section": 8,
+      "title": "A finished worktree is removed",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "git",
+      "triggers": [
+        "vcs-operation"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 269
+      }
+    },
+    {
+      "id": "PRU-85",
+      "section": 8,
+      "title": "The state of each worktree lives in `MapSource.md`: branch, logical owner, scope",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "git",
+      "triggers": [
+        "vcs-operation"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 276
+      }
+    },
+    {
+      "id": "PRU-90",
+      "section": 9,
+      "subsection": "9.1",
+      "title": "The `.gitignore` is your responsibility and exists to keep secrets, artifacts, a",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "git",
+      "triggers": [
+        "vcs-operation"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 284
+      }
+    },
+    {
+      "id": "PRU-91",
+      "section": 9,
+      "subsection": "9.2",
+      "title": "Run, in order:",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "git",
+      "triggers": [
+        "vcs-operation"
+      ],
+      "references": [
+        "PRU-20",
+        "PRU-22",
+        "PRU-177",
+        "PRU-182"
+      ],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 297
+      }
+    },
+    {
+      "id": "PRU-92",
+      "section": 9,
+      "subsection": "9.2",
+      "title": "Any item that fails, fix before committing. You do not commit dirt to clean late",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "git",
+      "triggers": [
+        "vcs-operation"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 307
+      }
+    },
+    {
+      "id": "PRU-93",
+      "section": 9,
+      "subsection": "9.3",
+      "title": "A commit represents **one** complete logical change. A bug fix and a refactor in",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "git",
+      "triggers": [
+        "vcs-operation"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 311
+      }
+    },
+    {
+      "id": "PRU-94",
+      "section": 9,
+      "subsection": "9.3",
+      "title": "The commit leaves the tree in a state that compiles and passes the tests. No bro",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "git",
+      "triggers": [
+        "vcs-operation"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 313
+      }
+    },
+    {
+      "id": "PRU-95",
+      "section": 9,
+      "subsection": "9.4",
+      "title": "Conventional Commits, written like a human, in normal prose, in the repository's",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "git",
+      "triggers": [
+        "vcs-operation"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 317
+      }
+    },
+    {
+      "id": "PRU-96",
+      "section": 9,
+      "subsection": "9.4",
+      "title": "Message rules:",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "git",
+      "triggers": [
+        "vcs-operation"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 330
+      }
+    },
+    {
+      "id": "PRU-97",
+      "section": 9,
+      "subsection": "9.4",
+      "title": "Forbidden:",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "git",
+      "triggers": [
+        "vcs-operation"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 339
+      }
+    },
+    {
+      "id": "PRU-98",
+      "section": 9,
+      "subsection": "9.4",
+      "title": "SemVer",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "git",
+      "triggers": [
+        "vcs-operation"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 341
+      }
+    },
+    {
+      "id": "PRU-99",
+      "section": 9,
+      "subsection": "9.4",
+      "title": "You commit on your own when the PRU-91 inspection passes in full. You do **not**",
+      "tier": "kernel",
+      "reminder": true,
+      "critical": false,
+      "chapter": "git",
+      "triggers": [
+        "vcs-operation"
+      ],
+      "references": [
+        "PRU-91"
+      ],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 343
+      }
+    },
+    {
+      "id": "PRU-100",
+      "section": 10,
+      "title": "Mandatory content",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "mapsource",
+      "triggers": [
+        "state-work"
+      ],
+      "references": [
+        "PRU-68",
+        "PRU-247"
+      ],
+      "enforcement": "DETERMINISTICALLY_TESTED",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 351
+      }
+    },
+    {
+      "id": "PRU-101",
+      "section": 10,
+      "title": "Record in `MapSource.md` the small remarks that do **not** belong in the code. T",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "mapsource",
+      "triggers": [
+        "state-work"
+      ],
+      "references": [
+        "PRU-20"
+      ],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 362
+      }
+    },
+    {
+      "id": "PRU-102",
+      "section": 10,
+      "title": "Use Obsidian-flavored Markdown",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "mapsource",
+      "triggers": [
+        "state-work"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 364
+      }
+    },
+    {
+      "id": "PRU-103",
+      "section": 10,
+      "title": "Diagrams:",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "mapsource",
+      "triggers": [
+        "state-work"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 372
+      }
+    },
+    {
+      "id": "PRU-104",
+      "section": 10,
+      "title": "`MapSource.md` is updated at the end of each block of work, not at the end of th",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "mapsource",
+      "triggers": [
+        "state-work"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 400
+      }
+    },
+    {
+      "id": "PRU-110",
+      "section": 11,
+      "title": "Reread what you just wrote, with a clean context, as if it were someone else's code",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "coding",
+      "triggers": [
+        "source-edit"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 406
+      }
+    },
+    {
+      "id": "PRU-111",
+      "section": 11,
+      "title": "While coding, record the suspicion on the spot",
+      "tier": "kernel",
+      "reminder": false,
+      "critical": false,
+      "chapter": "coding",
+      "triggers": [
+        "source-edit"
+      ],
+      "references": [],
+      "enforcement": "DETERMINISTICALLY_TESTED",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 408
+      }
+    },
+    {
+      "id": "PRU-112",
+      "section": 11,
+      "title": "Self-audit checklist",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "coding",
+      "triggers": [
+        "source-edit"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 410
+      }
+    },
+    {
+      "id": "PRU-113",
+      "section": 11,
+      "title": "Close the hole on the spot when the cost is low and the risk is real",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "coding",
+      "triggers": [
+        "source-edit"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 420
+      }
+    },
+    {
+      "id": "PRU-114",
+      "section": 11,
+      "title": "A resolved item leaves the suspicion zone",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "coding",
+      "triggers": [
+        "source-edit"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 422
+      }
+    },
+    {
+      "id": "PRU-115",
+      "section": 11,
+      "title": "No delivery happens with a high-severity item open and undeclared",
+      "tier": "kernel",
+      "reminder": true,
+      "critical": true,
+      "chapter": "coding",
+      "triggers": [
+        "source-edit"
+      ],
+      "references": [],
+      "enforcement": "BEHAVIOR_EVAL",
+      "evalSuite": "false-verification",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 424
+      }
+    },
+    {
+      "id": "PRU-120",
+      "section": 12,
+      "subsection": "12.1",
+      "title": "Forbidden patterns:",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "public-writing",
+      "triggers": [
+        "public-copy"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 436
+      }
+    },
+    {
+      "id": "PRU-121",
+      "section": 12,
+      "subsection": "12.1",
+      "title": "The detection signal is convergence: three or four of those patterns failing in ",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "public-writing",
+      "triggers": [
+        "public-copy"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 449
+      }
+    },
+    {
+      "id": "PRU-122",
+      "section": 12,
+      "subsection": "12.2",
+      "title": "Concrete nouns and verifiable numbers",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "public-writing",
+      "triggers": [
+        "public-copy"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 453
+      }
+    },
+    {
+      "id": "PRU-123",
+      "section": 12,
+      "subsection": "12.2",
+      "title": "Vary sentence length deliberately",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "public-writing",
+      "triggers": [
+        "public-copy"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 455
+      }
+    },
+    {
+      "id": "PRU-124",
+      "section": 12,
+      "subsection": "12.2",
+      "title": "Active voice and an explicit subject",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "public-writing",
+      "triggers": [
+        "public-copy"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 457
+      }
+    },
+    {
+      "id": "PRU-125",
+      "section": 12,
+      "subsection": "12.2",
+      "title": "Cut every adverb that does not change the meaning:",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "public-writing",
+      "triggers": [
+        "public-copy"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 459
+      }
+    },
+    {
+      "id": "PRU-126",
+      "section": 12,
+      "subsection": "12.2",
+      "title": "One idea per paragraph",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "public-writing",
+      "triggers": [
+        "public-copy"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 461
+      }
+    },
+    {
+      "id": "PRU-127",
+      "section": 12,
+      "subsection": "12.2",
+      "title": "Every command shown has to run",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "public-writing",
+      "triggers": [
+        "public-copy"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 463
+      }
+    },
+    {
+      "id": "PRU-128",
+      "section": 12,
+      "subsection": "12.2",
+      "title": "Honest curiosity, never bait",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "public-writing",
+      "triggers": [
+        "public-copy"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 465
+      }
+    },
+    {
+      "id": "PRU-129",
+      "section": 12,
+      "subsection": "12.3",
+      "title": "The term a person would type into search appears in the title, in the first line",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "public-writing",
+      "triggers": [
+        "public-copy"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 469
+      }
+    },
+    {
+      "id": "PRU-130",
+      "section": 12,
+      "subsection": "12.4",
+      "title": "Applies to UI and UX:",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "public-writing",
+      "triggers": [
+        "public-copy"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 473
+      }
+    },
+    {
+      "id": "PRU-140",
+      "section": 13,
+      "title": "Structure:",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "public-writing",
+      "triggers": [
+        "public-copy"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 488
+      }
+    },
+    {
+      "id": "PRU-141",
+      "section": 13,
+      "title": "Forbidden in the README:",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "public-writing",
+      "triggers": [
+        "public-copy"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 500
+      }
+    },
+    {
+      "id": "PRU-142",
+      "section": 13,
+      "title": "The README reflects the current state of the code. An outdated README is a defec",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "public-writing",
+      "triggers": [
+        "public-copy"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 502
+      }
+    },
+    {
+      "id": "PRU-150",
+      "section": 14,
+      "title": "Delivery gate: acceptance criteria verified by real execution, whole diff read, ",
+      "tier": "kernel",
+      "reminder": false,
+      "critical": false,
+      "chapter": "coding",
+      "triggers": [
+        "source-edit"
+      ],
+      "references": [
+        "PRU-91",
+        "PRU-177",
+        "PRU-182"
+      ],
+      "enforcement": "BEHAVIOR_EVAL",
+      "evalSuite": "false-verification",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 508
+      }
+    },
+    {
+      "id": "PRU-151",
+      "section": 14,
+      "title": "Final report",
+      "tier": "kernel",
+      "reminder": false,
+      "critical": false,
+      "chapter": "coding",
+      "triggers": [
+        "source-edit"
+      ],
+      "references": [
+        "PRU-157"
+      ],
+      "enforcement": "BEHAVIOR_EVAL",
+      "evalSuite": "false-verification",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 519
+      }
+    },
+    {
+      "id": "PRU-152",
+      "section": 15,
+      "subsection": "15.1",
+      "title": "The verdict is mandatory and comes first",
+      "tier": "kernel",
+      "reminder": true,
+      "critical": true,
+      "chapter": "judgment",
+      "triggers": [
+        "opinion-request"
+      ],
+      "references": [],
+      "enforcement": "BEHAVIOR_EVAL",
+      "evalSuite": "sycophancy",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 531
+      }
+    },
+    {
+      "id": "PRU-153",
+      "section": 15,
+      "subsection": "15.1",
+      "title": "Bad is said as bad",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "judgment",
+      "triggers": [
+        "opinion-request"
+      ],
+      "references": [],
+      "enforcement": "BEHAVIOR_EVAL",
+      "evalSuite": "sycophancy",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 540
+      }
+    },
+    {
+      "id": "PRU-154",
+      "section": 15,
+      "subsection": "15.1",
+      "title": "Criticism without an alternative is complaint",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "judgment",
+      "triggers": [
+        "opinion-request"
+      ],
+      "references": [],
+      "enforcement": "BEHAVIOR_EVAL",
+      "evalSuite": "sycophancy",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 542
+      }
+    },
+    {
+      "id": "PRU-155",
+      "section": 15,
+      "subsection": "15.1",
+      "title": "Closed list of flattery",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "judgment",
+      "triggers": [
+        "opinion-request"
+      ],
+      "references": [],
+      "enforcement": "BEHAVIOR_EVAL",
+      "evalSuite": "sycophancy",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 550
+      }
+    },
+    {
+      "id": "PRU-156",
+      "section": 15,
+      "subsection": "15.1",
+      "title": "Changing your mind requires a new fact",
+      "tier": "kernel",
+      "reminder": true,
+      "critical": true,
+      "chapter": "judgment",
+      "triggers": [
+        "opinion-request"
+      ],
+      "references": [],
+      "enforcement": "BEHAVIOR_EVAL",
+      "evalSuite": "pressure-resistance",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 561
+      }
+    },
+    {
+      "id": "PRU-157",
+      "section": 15,
+      "subsection": "15.2",
+      "title": "Grade your own delivery on the same scale",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "judgment",
+      "triggers": [
+        "opinion-request"
+      ],
+      "references": [],
+      "enforcement": "BEHAVIOR_EVAL",
+      "evalSuite": "false-verification",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 565
+      }
+    },
+    {
+      "id": "PRU-158",
+      "section": 15,
+      "subsection": "15.2",
+      "title": "Never claim a verification that did not happen",
+      "tier": "kernel",
+      "reminder": true,
+      "critical": true,
+      "chapter": "judgment",
+      "triggers": [
+        "opinion-request"
+      ],
+      "references": [],
+      "enforcement": "BEHAVIOR_EVAL",
+      "evalSuite": "false-verification",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 567
+      }
+    },
+    {
+      "id": "PRU-159",
+      "section": 15,
+      "subsection": "15.2",
+      "title": "When the user is wrong about a fact, correct once, with evidence",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "judgment",
+      "triggers": [
+        "opinion-request"
+      ],
+      "references": [
+        "PRU-35"
+      ],
+      "enforcement": "BEHAVIOR_EVAL",
+      "evalSuite": "user-correction",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 569
+      }
+    },
+    {
+      "id": "PRU-160",
+      "section": 16,
+      "subsection": "16.1",
+      "title": "The name is the comment that does not rot. Where you feel the urge to write a co",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "coding",
+      "triggers": [
+        "source-edit"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 593
+      }
+    },
+    {
+      "id": "PRU-161",
+      "section": 16,
+      "subsection": "16.1",
+      "title": "Name length follows scope",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "coding",
+      "triggers": [
+        "source-edit"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 602
+      }
+    },
+    {
+      "id": "PRU-162",
+      "section": 16,
+      "subsection": "16.2",
+      "title": "A function does one thing, at a single level of abstraction",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "coding",
+      "triggers": [
+        "source-edit"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 606
+      }
+    },
+    {
+      "id": "PRU-163",
+      "section": 16,
+      "subsection": "16.2",
+      "title": "Extract the block you were about to comment",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "coding",
+      "triggers": [
+        "source-edit"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 608
+      }
+    },
+    {
+      "id": "PRU-164",
+      "section": 16,
+      "subsection": "16.2",
+      "title": "Few parameters",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "coding",
+      "triggers": [
+        "source-edit"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 627
+      }
+    },
+    {
+      "id": "PRU-165",
+      "section": 16,
+      "subsection": "16.2",
+      "title": "Guard clauses at the top, happy path unindented",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "coding",
+      "triggers": [
+        "source-edit"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 629
+      }
+    },
+    {
+      "id": "PRU-166",
+      "section": 16,
+      "subsection": "16.2",
+      "title": "No output parameters and no hidden side effects",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "coding",
+      "triggers": [
+        "source-edit"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 641
+      }
+    },
+    {
+      "id": "PRU-167",
+      "section": 16,
+      "subsection": "16.2",
+      "title": "Command and query separated",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "coding",
+      "triggers": [
+        "source-edit"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 643
+      }
+    },
+    {
+      "id": "PRU-168",
+      "section": 16,
+      "subsection": "16.3",
+      "title": "No magic numbers or magic strings",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "coding",
+      "triggers": [
+        "source-edit"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 647
+      }
+    },
+    {
+      "id": "PRU-169",
+      "section": 16,
+      "subsection": "16.3",
+      "title": "Level symmetry",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "coding",
+      "triggers": [
+        "source-edit"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 649
+      }
+    },
+    {
+      "id": "PRU-170",
+      "section": 16,
+      "subsection": "16.3",
+      "title": "Descending reading order",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "coding",
+      "triggers": [
+        "source-edit"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 651
+      }
+    },
+    {
+      "id": "PRU-171",
+      "section": 16,
+      "subsection": "16.3",
+      "title": "Proximity",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "coding",
+      "triggers": [
+        "source-edit"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 653
+      }
+    },
+    {
+      "id": "PRU-172",
+      "section": 16,
+      "subsection": "16.3",
+      "title": "Immutable state by default",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "coding",
+      "triggers": [
+        "source-edit"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 655
+      }
+    },
+    {
+      "id": "PRU-173",
+      "section": 16,
+      "subsection": "16.3",
+      "title": "Make illegal states unrepresentable",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "coding",
+      "triggers": [
+        "source-edit"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 657
+      }
+    },
+    {
+      "id": "PRU-174",
+      "section": 16,
+      "subsection": "16.3",
+      "title": "An error is a value or a typed exception,",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "coding",
+      "triggers": [
+        "source-edit"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 659
+      }
+    },
+    {
+      "id": "PRU-175",
+      "section": 16,
+      "subsection": "16.3",
+      "title": "Tests are executable documentation",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "coding",
+      "triggers": [
+        "source-edit"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 661
+      }
+    },
+    {
+      "id": "PRU-176",
+      "section": 16,
+      "subsection": "16.4",
+      "title": "Comment only what the code cannot say: the why",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "coding",
+      "triggers": [
+        "source-edit"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 667
+      }
+    },
+    {
+      "id": "PRU-177",
+      "section": 16,
+      "subsection": "16.4",
+      "title": "Legitimate comments, closed list:",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "coding",
+      "triggers": [
+        "source-edit"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 669
+      }
+    },
+    {
+      "id": "PRU-178",
+      "section": 16,
+      "subsection": "16.4",
+      "title": "The shape of a useful comment:",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "coding",
+      "triggers": [
+        "source-edit"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 678
+      }
+    },
+    {
+      "id": "PRU-179",
+      "section": 16,
+      "subsection": "16.4",
+      "title": "A comment dies with the code it describes",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "coding",
+      "triggers": [
+        "source-edit"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 705
+      }
+    },
+    {
+      "id": "PRU-180",
+      "section": 16,
+      "subsection": "16.4",
+      "title": "`TODO`, `FIXME`, `HACK`, and `XXX` do not exist in this project",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "coding",
+      "triggers": [
+        "source-edit"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 707
+      }
+    },
+    {
+      "id": "PRU-181",
+      "section": 16,
+      "subsection": "16.4",
+      "title": "No decorative section comments,",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "coding",
+      "triggers": [
+        "source-edit"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 713
+      }
+    },
+    {
+      "id": "PRU-182",
+      "section": 16,
+      "subsection": "16.4",
+      "title": "Public API documentation is a deliberate exception",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "coding",
+      "triggers": [
+        "source-edit"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 715
+      }
+    },
+    {
+      "id": "PRU-190",
+      "section": 17,
+      "subsection": "17.1",
+      "title": "Use Mermaid when",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "architecture",
+      "triggers": [
+        "structural-change"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 727
+      }
+    },
+    {
+      "id": "PRU-191",
+      "section": 17,
+      "subsection": "17.1",
+      "title": "Use Archify when",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "architecture",
+      "triggers": [
+        "structural-change"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 729
+      }
+    },
+    {
+      "id": "PRU-192",
+      "section": 17,
+      "subsection": "17.1",
+      "title": "Never generate both for the same content",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "architecture",
+      "triggers": [
+        "structural-change"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 737
+      }
+    },
+    {
+      "id": "PRU-193",
+      "section": 17,
+      "subsection": "17.3",
+      "title": "Choose the type by what the diagram has to answer:",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "architecture",
+      "triggers": [
+        "structural-change"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 753
+      }
+    },
+    {
+      "id": "PRU-194",
+      "section": 17,
+      "subsection": "17.3",
+      "title": "The cycle is: generate typed JSON, validate, render, iterate over the same sourc",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "architecture",
+      "triggers": [
+        "structural-change"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 763
+      }
+    },
+    {
+      "id": "PRU-195",
+      "section": 17,
+      "subsection": "17.3",
+      "title": "Base configuration",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "architecture",
+      "triggers": [
+        "structural-change"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 765
+      }
+    },
+    {
+      "id": "PRU-196",
+      "section": 17,
+      "subsection": "17.4",
+      "title": "Archify lets a node be anchored to real code with verification in Git. Always us",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "architecture",
+      "triggers": [
+        "structural-change"
+      ],
+      "references": [
+        "PRU-100"
+      ],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 781
+      }
+    },
+    {
+      "id": "PRU-197",
+      "section": 17,
+      "subsection": "17.4",
+      "title": "A broken anchor is a sign that the code moved and the map did not. Treat it like",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "architecture",
+      "triggers": [
+        "structural-change"
+      ],
+      "references": [
+        "PRU-142"
+      ],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 783
+      }
+    },
+    {
+      "id": "PRU-198",
+      "section": 17,
+      "subsection": "17.5",
+      "title": "Before a structural change, generate the snapshot. After the change, generate th",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "architecture",
+      "triggers": [
+        "structural-change"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 787
+      }
+    },
+    {
+      "id": "PRU-199",
+      "section": 17,
+      "subsection": "17.5",
+      "title": "A delta that shows an unintended change at the boundary between components is an",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "architecture",
+      "triggers": [
+        "structural-change"
+      ],
+      "references": [
+        "PRU-111"
+      ],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 789
+      }
+    },
+    {
+      "id": "PRU-200",
+      "section": 17,
+      "subsection": "17.6",
+      "title": "The JSON source and the generated HTML are internal work artifacts",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "architecture",
+      "triggers": [
+        "structural-change"
+      ],
+      "references": [
+        "PRU-90"
+      ],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 793
+      }
+    },
+    {
+      "id": "PRU-210",
+      "section": 18,
+      "subsection": "18.1",
+      "title": "Enter security-audit mode without being asked whenever the work touches authenti",
+      "tier": "kernel",
+      "reminder": true,
+      "critical": true,
+      "chapter": "security",
+      "triggers": [
+        "auth-surface",
+        "external-input",
+        "data-access",
+        "personal-data",
+        "crypto-secrets",
+        "supply-chain"
+      ],
+      "references": [],
+      "enforcement": "BEHAVIOR_EVAL",
+      "evalSuite": "security-trigger",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 805
+      }
+    },
+    {
+      "id": "PRU-211",
+      "section": 18,
+      "subsection": "18.1",
+      "title": "The result of the audit goes to the **suspicion zone** of `MapSource.md` with `f",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "security",
+      "triggers": [
+        "auth-surface",
+        "external-input",
+        "data-access",
+        "personal-data",
+        "crypto-secrets",
+        "supply-chain"
+      ],
+      "references": [
+        "PRU-115"
+      ],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 815
+      }
+    },
+    {
+      "id": "PRU-212",
+      "section": 18,
+      "subsection": "18.2",
+      "title": "Every external input is hostile until validated",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "security",
+      "triggers": [
+        "auth-surface",
+        "external-input",
+        "data-access",
+        "personal-data",
+        "crypto-secrets",
+        "supply-chain"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 819
+      }
+    },
+    {
+      "id": "PRU-213",
+      "section": 18,
+      "subsection": "18.2",
+      "title": "Validate on input, escape on output",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "security",
+      "triggers": [
+        "auth-surface",
+        "external-input",
+        "data-access",
+        "personal-data",
+        "crypto-secrets",
+        "supply-chain"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 821
+      }
+    },
+    {
+      "id": "PRU-214",
+      "section": 18,
+      "subsection": "18.2",
+      "title": "An allowlist beats a blocklist, always",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "security",
+      "triggers": [
+        "auth-surface",
+        "external-input",
+        "data-access",
+        "personal-data",
+        "crypto-secrets",
+        "supply-chain"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 826
+      }
+    },
+    {
+      "id": "PRU-215",
+      "section": 18,
+      "subsection": "18.2",
+      "title": "Never sanitize by concatenation",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "security",
+      "triggers": [
+        "auth-surface",
+        "external-input",
+        "data-access",
+        "personal-data",
+        "crypto-secrets",
+        "supply-chain"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 828
+      }
+    },
+    {
+      "id": "PRU-216",
+      "section": 18,
+      "subsection": "18.2",
+      "title": "The escaping context changes inside the same document",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "security",
+      "triggers": [
+        "auth-surface",
+        "external-input",
+        "data-access",
+        "personal-data",
+        "crypto-secrets",
+        "supply-chain"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 841
+      }
+    },
+    {
+      "id": "PRU-217",
+      "section": 18,
+      "subsection": "18.2",
+      "title": "An upload is hostile input of another category",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "security",
+      "triggers": [
+        "auth-surface",
+        "external-input",
+        "data-access",
+        "personal-data",
+        "crypto-secrets",
+        "supply-chain"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 843
+      }
+    },
+    {
+      "id": "PRU-218",
+      "section": 18,
+      "subsection": "18.2",
+      "title": "Deserializing external data into an application object is remote execution waiting to happen",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "security",
+      "triggers": [
+        "auth-surface",
+        "external-input",
+        "data-access",
+        "personal-data",
+        "crypto-secrets",
+        "supply-chain"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 845
+      }
+    },
+    {
+      "id": "PRU-219",
+      "section": 18,
+      "subsection": "18.3",
+      "title": "Sweep the diff against this list. It covers what breaks real systems, in the ord",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "security",
+      "triggers": [
+        "auth-surface",
+        "external-input",
+        "data-access",
+        "personal-data",
+        "crypto-secrets",
+        "supply-chain"
+      ],
+      "references": [],
+      "enforcement": "BEHAVIOR_EVAL",
+      "evalSuite": "security-trigger",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 849
+      }
+    },
+    {
+      "id": "PRU-220",
+      "section": 18,
+      "subsection": "18.3",
+      "title": "Multi-tenancy gets its own item and it is fatal:",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": true,
+      "chapter": "security",
+      "triggers": [
+        "auth-surface",
+        "external-input",
+        "data-access",
+        "personal-data",
+        "crypto-secrets",
+        "supply-chain"
+      ],
+      "references": [],
+      "enforcement": "BEHAVIOR_EVAL",
+      "evalSuite": "security-trigger",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 864
+      }
+    },
+    {
+      "id": "PRU-221",
+      "section": 18,
+      "subsection": "18.4",
+      "title": "A password is never stored, it is verified",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "security",
+      "triggers": [
+        "auth-surface",
+        "external-input",
+        "data-access",
+        "personal-data",
+        "crypto-secrets",
+        "supply-chain"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 868
+      }
+    },
+    {
+      "id": "PRU-222",
+      "section": 18,
+      "subsection": "18.4",
+      "title": "Never write cryptography, password hashing, JWT, or an OAuth flow from scratch",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "security",
+      "triggers": [
+        "auth-surface",
+        "external-input",
+        "data-access",
+        "personal-data",
+        "crypto-secrets",
+        "supply-chain"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 870
+      }
+    },
+    {
+      "id": "PRU-223",
+      "section": 18,
+      "subsection": "18.4",
+      "title": "A secret comes from the environment or from a vault",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": true,
+      "chapter": "security",
+      "triggers": [
+        "auth-surface",
+        "external-input",
+        "data-access",
+        "personal-data",
+        "crypto-secrets",
+        "supply-chain"
+      ],
+      "references": [],
+      "enforcement": "BEHAVIOR_EVAL",
+      "evalSuite": "security-trigger",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 872
+      }
+    },
+    {
+      "id": "PRU-224",
+      "section": 18,
+      "subsection": "18.4",
+      "title": "Tokens and session identifiers",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "security",
+      "triggers": [
+        "auth-surface",
+        "external-input",
+        "data-access",
+        "personal-data",
+        "crypto-secrets",
+        "supply-chain"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 874
+      }
+    },
+    {
+      "id": "PRU-225",
+      "section": 18,
+      "subsection": "18.4",
+      "title": "Always propose a second factor when the system has a login",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "security",
+      "triggers": [
+        "auth-surface",
+        "external-input",
+        "data-access",
+        "personal-data",
+        "crypto-secrets",
+        "supply-chain"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 876
+      }
+    },
+    {
+      "id": "PRU-226",
+      "section": 18,
+      "subsection": "18.4",
+      "title": "Password recovery is the back door of authentication",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "security",
+      "triggers": [
+        "auth-surface",
+        "external-input",
+        "data-access",
+        "personal-data",
+        "crypto-secrets",
+        "supply-chain"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 885
+      }
+    },
+    {
+      "id": "PRU-227",
+      "section": 18,
+      "subsection": "18.4",
+      "title": "Attempt limits and progressive slowdown",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "security",
+      "triggers": [
+        "auth-surface",
+        "external-input",
+        "data-access",
+        "personal-data",
+        "crypto-secrets",
+        "supply-chain"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 887
+      }
+    },
+    {
+      "id": "PRU-228",
+      "section": 18,
+      "subsection": "18.5",
+      "title": "Identify the jurisdiction before designing storage",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "security",
+      "triggers": [
+        "auth-surface",
+        "external-input",
+        "data-access",
+        "personal-data",
+        "crypto-secrets",
+        "supply-chain"
+      ],
+      "references": [
+        "PRU-41"
+      ],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 893
+      }
+    },
+    {
+      "id": "PRU-229",
+      "section": 18,
+      "subsection": "18.5",
+      "title": "Record the answer in `MapSource.md`,",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "security",
+      "triggers": [
+        "auth-surface",
+        "external-input",
+        "data-access",
+        "personal-data",
+        "crypto-secrets",
+        "supply-chain"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 895
+      }
+    },
+    {
+      "id": "PRU-230",
+      "section": 18,
+      "subsection": "18.5",
+      "title": "Principles that appear, under different names, in practically every modern data-protection regime",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "security",
+      "triggers": [
+        "auth-surface",
+        "external-input",
+        "data-access",
+        "personal-data",
+        "crypto-secrets",
+        "supply-chain"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 897
+      }
+    },
+    {
+      "id": "PRU-231",
+      "section": 18,
+      "subsection": "18.5",
+      "title": "Categories that require reinforced care",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "security",
+      "triggers": [
+        "auth-surface",
+        "external-input",
+        "data-access",
+        "personal-data",
+        "crypto-secrets",
+        "supply-chain"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 911
+      }
+    },
+    {
+      "id": "PRU-232",
+      "section": 18,
+      "subsection": "18.5",
+      "title": "Privacy by default and by design",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "security",
+      "triggers": [
+        "auth-surface",
+        "external-input",
+        "data-access",
+        "personal-data",
+        "crypto-secrets",
+        "supply-chain"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 913
+      }
+    },
+    {
+      "id": "PRU-233",
+      "section": 18,
+      "subsection": "18.5",
+      "title": "Personal data does not go into logs, error messages, URLs, third-party analytics, or a language model prompt",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "security",
+      "triggers": [
+        "auth-surface",
+        "external-input",
+        "data-access",
+        "personal-data",
+        "crypto-secrets",
+        "supply-chain"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 915
+      }
+    },
+    {
+      "id": "PRU-234",
+      "section": 18,
+      "subsection": "18.5",
+      "title": "You do not give legal advice",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "security",
+      "triggers": [
+        "auth-surface",
+        "external-input",
+        "data-access",
+        "personal-data",
+        "crypto-secrets",
+        "supply-chain"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 917
+      }
+    },
+    {
+      "id": "PRU-235",
+      "section": 18,
+      "subsection": "18.6",
+      "title": "Every new dependency is attack surface",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "security",
+      "triggers": [
+        "auth-surface",
+        "external-input",
+        "data-access",
+        "personal-data",
+        "crypto-secrets",
+        "supply-chain"
+      ],
+      "references": [
+        "PRU-26"
+      ],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 921
+      }
+    },
+    {
+      "id": "PRU-236",
+      "section": 18,
+      "subsection": "18.6",
+      "title": "Run the ecosystem's vulnerability audit",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "security",
+      "triggers": [
+        "auth-surface",
+        "external-input",
+        "data-access",
+        "personal-data",
+        "crypto-secrets",
+        "supply-chain"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 923
+      }
+    },
+    {
+      "id": "PRU-237",
+      "section": 18,
+      "subsection": "18.6",
+      "title": "A secret in CI is a secret",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "security",
+      "triggers": [
+        "auth-surface",
+        "external-input",
+        "data-access",
+        "personal-data",
+        "crypto-secrets",
+        "supply-chain"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 925
+      }
+    },
+    {
+      "id": "PRU-238",
+      "section": 18,
+      "subsection": "18.7",
+      "title": "No commit that touches the PRU-210 triggers passes without:",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": true,
+      "chapter": "security",
+      "triggers": [
+        "auth-surface",
+        "external-input",
+        "data-access",
+        "personal-data",
+        "crypto-secrets",
+        "supply-chain"
+      ],
+      "references": [
+        "PRU-219"
+      ],
+      "enforcement": "BEHAVIOR_EVAL",
+      "evalSuite": "security-trigger",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 929
+      }
+    },
+    {
+      "id": "PRU-239",
+      "section": 18,
+      "subsection": "18.7",
+      "title": "When you finish, deliver the security summary in three lines:",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "security",
+      "triggers": [
+        "auth-surface",
+        "external-input",
+        "data-access",
+        "personal-data",
+        "crypto-secrets",
+        "supply-chain"
+      ],
+      "references": [],
+      "enforcement": "MANUAL",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 938
+      }
+    },
+    {
+      "id": "PRU-240",
+      "section": 19,
+      "title": "Reproduce before fixing",
+      "tier": "kernel",
+      "reminder": true,
+      "critical": true,
+      "chapter": "debugging",
+      "triggers": [
+        "failing-test",
+        "runtime-error"
+      ],
+      "references": [],
+      "enforcement": "BEHAVIOR_EVAL",
+      "evalSuite": "debug-hypothesis",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 946
+      }
+    },
+    {
+      "id": "PRU-241",
+      "section": 19,
+      "title": "Read the whole error before theorizing",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "debugging",
+      "triggers": [
+        "failing-test",
+        "runtime-error"
+      ],
+      "references": [],
+      "enforcement": "BEHAVIOR_EVAL",
+      "evalSuite": "debug-hypothesis",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 948
+      }
+    },
+    {
+      "id": "PRU-242",
+      "section": 19,
+      "title": "A written hypothesis before the change",
+      "tier": "kernel",
+      "reminder": false,
+      "critical": false,
+      "chapter": "debugging",
+      "triggers": [
+        "failing-test",
+        "runtime-error"
+      ],
+      "references": [],
+      "enforcement": "BEHAVIOR_EVAL",
+      "evalSuite": "debug-hypothesis",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 950
+      }
+    },
+    {
+      "id": "PRU-243",
+      "section": 19,
+      "title": "Split the space",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "debugging",
+      "triggers": [
+        "failing-test",
+        "runtime-error"
+      ],
+      "references": [],
+      "enforcement": "BEHAVIOR_EVAL",
+      "evalSuite": "debug-hypothesis",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 952
+      }
+    },
+    {
+      "id": "PRU-244",
+      "section": 19,
+      "title": "Fix the cause, not the symptom",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "debugging",
+      "triggers": [
+        "failing-test",
+        "runtime-error"
+      ],
+      "references": [],
+      "enforcement": "BEHAVIOR_EVAL",
+      "evalSuite": "debug-hypothesis",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 954
+      }
+    },
+    {
+      "id": "PRU-245",
+      "section": 19,
+      "title": "The fix ships with the test that was failing",
+      "tier": "kernel",
+      "reminder": true,
+      "critical": true,
+      "chapter": "debugging",
+      "triggers": [
+        "failing-test",
+        "runtime-error"
+      ],
+      "references": [],
+      "enforcement": "BEHAVIOR_EVAL",
+      "evalSuite": "debug-hypothesis",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 956
+      }
+    },
+    {
+      "id": "PRU-246",
+      "section": 19,
+      "title": "\"Works on my machine\" is not done",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "debugging",
+      "triggers": [
+        "failing-test",
+        "runtime-error"
+      ],
+      "references": [],
+      "enforcement": "BEHAVIOR_EVAL",
+      "evalSuite": "debug-hypothesis",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 958
+      }
+    },
+    {
+      "id": "PRU-247",
+      "section": 19,
+      "title": "The root cause goes to `MapSource.md`",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "debugging",
+      "triggers": [
+        "failing-test",
+        "runtime-error"
+      ],
+      "references": [],
+      "enforcement": "DETERMINISTICALLY_TESTED",
+      "evalSuite": "debug-hypothesis",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 960
+      }
+    },
+    {
+      "id": "PRU-250",
+      "section": 20,
+      "title": "Single source",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "protocol",
+      "triggers": [
+        "prumo-self"
+      ],
+      "references": [],
+      "enforcement": "DETERMINISTICALLY_TESTED",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 978
+      }
+    },
+    {
+      "id": "PRU-251",
+      "section": 20,
+      "title": "Integrity before distribution",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "protocol",
+      "triggers": [
+        "prumo-self"
+      ],
+      "references": [],
+      "enforcement": "DETERMINISTICALLY_TESTED",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 980
+      }
+    },
+    {
+      "id": "PRU-252",
+      "section": 20,
+      "title": "Context has a budget",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "protocol",
+      "triggers": [
+        "prumo-self"
+      ],
+      "references": [],
+      "enforcement": "DETERMINISTICALLY_TESTED",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 982
+      }
+    },
+    {
+      "id": "PRU-253",
+      "section": 20,
+      "title": "Routing is deterministic",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "protocol",
+      "triggers": [
+        "prumo-self"
+      ],
+      "references": [
+        "PRU-210"
+      ],
+      "enforcement": "DETERMINISTICALLY_TESTED",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 984
+      }
+    },
+    {
+      "id": "PRU-254",
+      "section": 20,
+      "title": "Presence is not activation",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "protocol",
+      "triggers": [
+        "prumo-self"
+      ],
+      "references": [],
+      "enforcement": "DETERMINISTICALLY_TESTED",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 986
+      }
+    },
+    {
+      "id": "PRU-255",
+      "section": 20,
+      "title": "A foreign file is preserved",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "protocol",
+      "triggers": [
+        "prumo-self"
+      ],
+      "references": [],
+      "enforcement": "ENFORCED",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 988
+      }
+    },
+    {
+      "id": "PRU-256",
+      "section": 20,
+      "title": "Installation is a transaction",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "protocol",
+      "triggers": [
+        "prumo-self"
+      ],
+      "references": [],
+      "enforcement": "ENFORCED",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 990
+      }
+    },
+    {
+      "id": "PRU-257",
+      "section": 20,
+      "title": "Every Prumo change is reversible",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "protocol",
+      "triggers": [
+        "prumo-self"
+      ],
+      "references": [],
+      "enforcement": "ENFORCED",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 992
+      }
+    },
+    {
+      "id": "PRU-258",
+      "section": 20,
+      "title": "The hook fails open, never silent",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "protocol",
+      "triggers": [
+        "prumo-self"
+      ],
+      "references": [],
+      "enforcement": "DETERMINISTICALLY_TESTED",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 994
+      }
+    },
+    {
+      "id": "PRU-259",
+      "section": 20,
+      "title": "State is inspectable",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "protocol",
+      "triggers": [
+        "prumo-self"
+      ],
+      "references": [],
+      "enforcement": "DETERMINISTICALLY_TESTED",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 996
+      }
+    },
+    {
+      "id": "PRU-260",
+      "section": 20,
+      "title": "MapSource has a bounded hot state",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "protocol",
+      "triggers": [
+        "prumo-self"
+      ],
+      "references": [],
+      "enforcement": "DETERMINISTICALLY_TESTED",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 998
+      }
+    },
+    {
+      "id": "PRU-261",
+      "section": 20,
+      "title": "Enforcement is not marketing",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "protocol",
+      "triggers": [
+        "prumo-self"
+      ],
+      "references": [],
+      "enforcement": "DETERMINISTICALLY_TESTED",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 1000
+      }
+    },
+    {
+      "id": "PRU-262",
+      "section": 20,
+      "title": "An adapter must prove its capability",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "protocol",
+      "triggers": [
+        "prumo-self"
+      ],
+      "references": [],
+      "enforcement": "DETERMINISTICALLY_TESTED",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 1002
+      }
+    },
+    {
+      "id": "PRU-263",
+      "section": 20,
+      "title": "A generated artifact carries its identity",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "protocol",
+      "triggers": [
+        "prumo-self"
+      ],
+      "references": [],
+      "enforcement": "DETERMINISTICALLY_TESTED",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 1004
+      }
+    },
+    {
+      "id": "PRU-264",
+      "section": 20,
+      "title": "A protocol change requires an eval",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "protocol",
+      "triggers": [
+        "prumo-self"
+      ],
+      "references": [],
+      "enforcement": "DETERMINISTICALLY_TESTED",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 1006
+      }
+    },
+    {
+      "id": "PRU-265",
+      "section": 20,
+      "title": "External metadata never becomes an instruction",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "protocol",
+      "triggers": [
+        "prumo-self"
+      ],
+      "references": [],
+      "enforcement": "ENFORCED",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 1008
+      }
+    },
+    {
+      "id": "PRU-266",
+      "section": 20,
+      "title": "Foreign configuration beats Prumo's preference",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "protocol",
+      "triggers": [
+        "prumo-self"
+      ],
+      "references": [],
+      "enforcement": "ENFORCED",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 1010
+      }
+    },
+    {
+      "id": "PRU-267",
+      "section": 20,
+      "title": "A contradictory rule is a build failure",
+      "tier": "chapter",
+      "reminder": false,
+      "critical": false,
+      "chapter": "protocol",
+      "triggers": [
+        "prumo-self"
+      ],
+      "references": [],
+      "enforcement": "DETERMINISTICALLY_TESTED",
+      "source": {
+        "file": "content/PRUMO.md",
+        "line": 1012
+      }
+    }
+  ]
+}

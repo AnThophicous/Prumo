@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://prumo.dev/schemas/install-state.schema.json",
+  "title": "Prumo install journal (~/.prumo/state/install.json)",
+  "type": "object",
+  "required": ["schema", "installerVersion", "runtimeVersion", "protocolVersion", "protocolHash", "runtime", "targets", "transactions"],
+  "properties": {
+    "schema": { "const": 1 },
+    "installerVersion": { "type": "string" },
+    "runtimeVersion": { "type": "string" },
+    "protocolVersion": { "type": "string" },
+    "protocolHash": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "updatedAt": { "type": "string", "format": "date-time" },
+    "options": {
+      "type": "object",
+      "properties": { "statusline": { "type": "boolean" }, "userProtocol": { "type": "boolean" } }
+    },
+    "runtime": {
+      "type": "object",
+      "required": ["mutations"],
+      "properties": { "mutations": { "type": "array", "items": { "$ref": "#/$defs/mutation" } }, "updatedAt": { "type": "string" } }
+    },
+    "targets": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["state", "mutations"],
+        "properties": {
+          "state": { "enum": ["ABSENT", "ACTIVE", "PARTIAL", "FOREIGN", "DRIFTED", "BROKEN", "DISABLED", "UNKNOWN"] },
+          "installedAt": { "type": "string" },
+          "updatedAt": { "type": "string" },
+          "mutations": { "type": "array", "items": { "$ref": "#/$defs/mutation" } }
+        }
+      }
+    },
+    "transactions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["at", "operation", "targets", "status"],
+        "properties": {
+          "id": { "type": ["string", "null"] },
+          "at": { "type": "string" },
+          "operation": { "enum": ["install", "update", "uninstall", "rollback"] },
+          "targets": { "type": "array", "items": { "type": "string" } },
+          "backup": { "type": ["string", "null"] },
+          "status": { "type": "string" }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "mutation": {
+      "type": "object",
+      "required": ["step", "path", "kind", "ownership"],
+      "properties": {
+        "step": { "type": "string" },
+        "path": { "type": "string" },
+        "kind": { "enum": ["file", "delete", "config", "managed-block"] },
+        "ownership": { "enum": ["prumo-file", "config-entry", "managed-block"] },
+        "beforeHash": { "type": ["string", "null"] },
+        "afterHash": { "type": ["string", "null"] },
+        "backup": { "type": ["string", "null"] }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "@prumocode/runtime",
+  "version": "2.0.0",
+  "description": "Prumo policy runtime: lifecycle hook, chapter router, project bridge state machine, MapSource schema and status line. Self-contained; copied into ~/.prumo/runtime.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AnThophicous/Prumo.git",
+    "directory": "packages/runtime"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "exports": {
+    ".": "./src/index.mjs"
+  },
+  "files": [
+    "src",
+    "hooks",
+    "statusline"
+  ],
+  "scripts": {
+    "test": "node --test test/"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

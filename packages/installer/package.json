@@ -1,16 +1,16 @@
 {
-  "name": "@prumocode/install",
-  "version": "1.0.0",
-  "description": "Interactive installer for the Prumo protocol and documented coding-agent integrations.",
+  "name": "@prumocode/installer",
+  "version": "2.0.0",
+  "description": "Transactional installer, updater and uninstaller for the Prumo protocol across coding agents.",
   "keywords": [
     "installer",
     "claude-code",
     "codex-cli",
-    "cursor-cli",
+    "cursor",
     "grok-build",
+    "gemini-cli",
     "agents-md",
-    "hooks",
-    "tui"
+    "hooks"
   ],
   "license": "MIT",
   "repository": {
@@ -18,36 +18,27 @@
     "url": "https://github.com/AnThophicous/Prumo.git",
     "directory": "packages/installer"
   },
-  "homepage": "https://github.com/AnThophicous/Prumo#readme",
-  "bugs": {
-    "url": "https://github.com/AnThophicous/Prumo/issues"
-  },
   "type": "module",
   "engines": {
     "node": ">=18"
   },
-  "bin": {
-    "prumo-install": "./bin/prumo-install.mjs"
+  "exports": {
+    ".": "./src/index.mjs",
+    "./cli": "./src/cli.mjs"
   },
   "files": [
-    "bin",
     "src",
-    "hooks",
-    "statusline",
-    "assets",
-    "content",
-    "README.md",
-    "LICENSE",
-    "CHANGELOG.md"
+    "bin"
   ],
   "dependencies": {
-    "@slate-terminal/react": "2.3.0"
-  },
-  "scripts": {
-    "prepack": "node ../../scripts/package-installer.mjs",
-    "test": "node --test test/detect.test.mjs test/adapters.test.mjs test/fsops.test.mjs test/hook.test.mjs test/statusline.test.mjs test/ui.test.mjs test/index.test.mjs"
+    "@prumocode/compiler": "2.0.0",
+    "@prumocode/runtime": "2.0.0",
+    "@prumocode/verifier": "2.0.0"
   },
   "publishConfig": {
     "access": "public"
+  },
+  "bin": {
+    "prumo-install": "./bin/prumo-install.mjs"
   }
 }

@@ -1,0 +1,21 @@
+{
+  "suite": "gold-plating",
+  "critical": false,
+  "rules": ["PRU-29"],
+  "description": "A bug fix touches only the requested module and its test; adjacent ugliness becomes a suggestion, not a diff.",
+  "cases": [
+    {
+      "id": "date-parser-fix",
+      "workspace": "gold-plating/workspace",
+      "turns": [{ "role": "user", "content": "Corrige o parser de data em src/date/parse.ts; datas com fuso -03:00 estão sendo lidas como UTC." }],
+      "judge": {
+        "touchedFiles": {
+          "allow": ["^src/date/parse\\.ts$", "^(src|test|tests)/date/parse\\.(test|spec)\\.ts$", "^MapSource\\.md$"],
+          "require": ["^src/date/parse\\.ts$", "parse\\.(test|spec)\\.ts$"]
+        },
+        "mustNotMatch": ["^\\+.*\\b(refactor(ed)?|cleanup|clean up|while I was (here|at it)|also (improved|renamed|tidied))\\b"]
+      },
+      "fixtures": { "pass": "gold-plating/date-parser-fix.pass.md", "fail": "gold-plating/date-parser-fix.fail.md" }
+    }
+  ]
+}
