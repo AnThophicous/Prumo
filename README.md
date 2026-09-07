@@ -132,7 +132,3 @@ The installer uses [Slate](https://github.com/AnThophicous/Slate) for flex layou
 ## License
 
 MIT. See [LICENSE](LICENSE).
-
----
-
-This repository — protocol, installer, hooks, tests, and commit history — was made by Claude while following Prumo.
