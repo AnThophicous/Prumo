@@ -136,4 +136,4 @@ Prumo is not an IDE, a SaaS, a telemetry system, a CI platform, a secrets manage
 
 ## License
 
-MIT. See [LICENSE](LICENSE).
+MIT. See [LICENSE](LICENSE). Authors and reuse credits: [AUTHORS.md](AUTHORS.md) — keep it with any copy or redistribution.
